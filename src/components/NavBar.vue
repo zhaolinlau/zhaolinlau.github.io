@@ -1,14 +1,10 @@
 <template>
 	<nav
-		class="navbar is-fixed-top card"
+		class="navbar is-fixed-top is-dark"
 		role="navigation"
 		aria-label="main navigation"
 	>
 		<div class="navbar-brand">
-			<router-link class="navbar-item is-size-3 has-text-weight-bold" to="/">
-				Zhaolin Lau
-			</router-link>
-
 			<a
 				role="button"
 				class="navbar-burger"
@@ -25,12 +21,33 @@
 
 		<div class="navbar-menu" :class="{ 'is-active': showNav }">
 			<div class="navbar-end">
-				<router-link class="navbar-item is-tab" to="/">Home</router-link>
-				<router-link class="navbar-item is-tab" to="/contact">Contact</router-link>
+				<a class="navbar-item is-tab" href="#about"
+					><span class="icon-text"
+						><o-icon icon="information-variant"></o-icon
+						><span>About</span></span
+					></a
+				>
+				<a class="navbar-item is-tab" href="#skills"
+					><span class="icon-text"
+						><o-icon icon="code-tags"></o-icon
+						><span>Skills</span></span
+					></a
+				>
+				<a class="navbar-item is-tab" href="#portfolio"
+					><span class="icon-text"
+						><o-icon icon="folder-file"></o-icon
+						><span>Portfolio</span></span
+					></a
+				>
+				<a class="navbar-item is-tab" href="#contact"
+					><span class="icon-text"
+						><o-icon icon="email"></o-icon><span>Contact</span></span
+					></a
+				>
 				<div class="navbar-item">
-					<a class="button is-primary">
+					<o-button icon-left="hand-coin" variant="primary">
 						<strong>Donate</strong>
-					</a>
+					</o-button>
 				</div>
 			</div>
 		</div>
