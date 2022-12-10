@@ -1,9 +1,7 @@
 <template>
 	<NavBar></NavBar>
 
-	<section
-		class="hero is-fullheight-with-navbar is-dark has-text-white"
-	>
+	<section class="hero is-fullheight-with-navbar is-dark has-text-white">
 		<div class="hero-body">
 			<div class="container">
 				<p class="subtitle">Hello! I am</p>
@@ -34,20 +32,34 @@
 			<div class="columns is-multiline">
 				<div class="column is-4">
 					<div class="card">
-              <header class="card-header">
-                <p class="card-header-title">
-                  <span>University Counselling Website</span>
-                </p>
-              </header>
-              <div class="card-content">
-                <figure class="image">
-                  <img src="./assets/utmfd.png" alt="工大Foundation & Diploma升学辅导站">
-                </figure>
-              </div>
-              <footer class="card-footer">
-                <a href="https://utmfd.github.io/" class="card-footer-item" target="_blank">Preview</a>
-              </footer>
-            </div>
+						<header class="card-header">
+							<p class="card-header-title">
+								<span>University Counselling Website</span>
+							</p>
+						</header>
+						<div class="card-content">
+							<figure class="image">
+								<img
+									src="./assets/utmfd.png"
+									alt="工大Foundation & Diploma升学辅导站"
+								/>
+							</figure>
+						</div>
+						<footer class="card-footer">
+							<a
+								href="https://utmfd.github.io/"
+								class="card-footer-item"
+								target="_blank"
+								>Preview</a
+							>
+							<a
+								href="https://github.com/UTMFD/utmfd.github.io"
+								class="card-footer-item"
+								target="_blank"
+								>Source Code</a
+							>
+						</footer>
+					</div>
 				</div>
 			</div>
 		</div>
