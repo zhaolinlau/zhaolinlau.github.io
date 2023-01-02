@@ -11,7 +11,7 @@
     "@mdi/font": "^7.1.96",
     "@oruga-ui/oruga-next": "^0.5.10",
     "@oruga-ui/theme-bulma": "^0.2.8",
-    "core-js": "^3.27.0",
+    "core-js": "^3.27.1",
     "vue": "^3.2.45"
   },
   "devDependencies": {
