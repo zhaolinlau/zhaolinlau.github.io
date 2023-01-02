@@ -60,7 +60,7 @@
 		name: "NavBar",
 		data() {
 			return {
-				showNav: false,
+				showNav: false
 			};
 		},
 	};
