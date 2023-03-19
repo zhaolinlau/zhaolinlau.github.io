@@ -8,7 +8,7 @@
 					<div class="card">
 						<header class="card-header">
 							<p class="card-header-title">
-								<span>University Counselling Website</span>
+								<span>Higher Education Counselling Website</span>
 							</p>
 						</header>
 						<div class="card-content">
