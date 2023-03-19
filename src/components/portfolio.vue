@@ -20,13 +20,13 @@
 						</div>
 						<footer class="card-footer">
 							<a
-								href="https://utmfd.github.io/"
+								href="https://utmfd.vercel.app/"
 								class="card-footer-item"
 								target="_blank">
 								Preview
 							</a>
 							<a
-								href="https://github.com/UTMFD/utmfd.github.io"
+								href="https://github.com/Luetify/UTM-FD"
 								class="card-footer-item"
 								target="_blank">
 								Source Code
