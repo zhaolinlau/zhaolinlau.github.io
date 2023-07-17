@@ -1,17 +1,16 @@
+<script setup>
+import ref from 'vue';
+const showNav = ref(false);
+</script>
+
 <template>
-	<nav class="navbar is-fixed-top has-shadow"
-		role="navigation"
-		aria-label="main navigation">
+	<nav class="navbar is-fixed-top has-shadow" role="navigation" aria-label="main navigation">
 		<div class="navbar-brand">
 			<a class="navbar-item" href="#">
 				<p class="title">Zhaolin Lau</p>
 			</a>
 
-			<a role="button"
-				class="navbar-burger"
-				aria-label="menu"
-				aria-expanded="false"
-				@click="showNav =! showNav"
+			<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" @click="showNav = !showNav"
 				:class="{ 'is-active': showNav }">
 				<span aria-hidden="true"></span>
 				<span aria-hidden="true"></span>
@@ -54,14 +53,3 @@
 		</div>
 	</nav>
 </template>
-
-<script>
-	export default {
-		name: "NavBar",
-		data() {
-			return {
-				showNav: false
-			};
-		},
-	};
-</script>

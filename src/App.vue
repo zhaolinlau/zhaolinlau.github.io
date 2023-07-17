@@ -34,13 +34,3 @@ img {
 	pointer-events: none;
 }
 </style>
-
-<style>
-html {
-	scroll-behavior: smooth;
-}
-
-img {
-	pointer-events: none;
-}
-</style>

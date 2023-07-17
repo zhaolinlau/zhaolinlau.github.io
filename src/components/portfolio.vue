@@ -1,5 +1,5 @@
 <template>
-  <section class="section" id="portfolio">
+	<section class="section" id="portfolio">
 		<div class="container">
 			<p class="title has-text-centered mt-3">Portfolio</p>
 
@@ -13,22 +13,14 @@
 						</header>
 						<div class="card-content">
 							<figure class="image">
-								<img
-									src="../assets/utmfd.png"
-									alt="utmfd.png"/>
+								<img src="../assets/utmfd.png" alt="utmfd.png" />
 							</figure>
 						</div>
 						<footer class="card-footer">
-							<a
-								href="https://utmfd.vercel.app/"
-								class="card-footer-item"
-								target="_blank">
+							<a href="https://utmfd.vercel.app/" class="card-footer-item" target="_blank">
 								Preview
 							</a>
-							<a
-								href="https://github.com/Luetify/UTM-FD"
-								class="card-footer-item"
-								target="_blank">
+							<a href="https://github.com/Luetify/UTM-FD" class="card-footer-item" target="_blank">
 								Source Code
 							</a>
 						</footer>
@@ -44,22 +36,14 @@
 						</header>
 						<div class="card-content">
 							<figure class="image">
-								<img
-									src="../assets/utmfd.png"
-									alt="utmfd.png"/>
+								<img src="../assets/utmfd.png" alt="utmfd.png" />
 							</figure>
 						</div>
 						<footer class="card-footer">
-							<a
-								href="https://utmfd.vercel.app/"
-								class="card-footer-item"
-								target="_blank">
+							<a href="https://utmfd.vercel.app/" class="card-footer-item" target="_blank">
 								Preview
 							</a>
-							<a
-								href="https://github.com/Luetify/UTM-FD"
-								class="card-footer-item"
-								target="_blank">
+							<a href="https://github.com/Luetify/UTM-FD" class="card-footer-item" target="_blank">
 								Source Code
 							</a>
 						</footer>
@@ -75,21 +59,14 @@
 						</header>
 						<div class="card-content">
 							<figure class="image">
-								<img
-									src="../assets/huawei-intelligent-world-2030.png"
-									alt="huawei-intelligent-world-2030.png"/>
+								<img src="../assets/huawei-intelligent-world-2030.png" alt="huawei-intelligent-world-2030.png" />
 							</figure>
 						</div>
 						<footer class="card-footer">
-							<a
-								href="https://huawei-intelligent-world-2030.vercel.app/"
-								class="card-footer-item"
-								target="_blank">
+							<a href="https://huawei-intelligent-world-2030.vercel.app/" class="card-footer-item" target="_blank">
 								Preview
 							</a>
-							<a
-								href="https://github.com/zhaolinlau/huawei-intelligent-world-2030"
-								class="card-footer-item"
+							<a href="https://github.com/zhaolinlau/huawei-intelligent-world-2030" class="card-footer-item"
 								target="_blank">
 								Source Code
 							</a>
@@ -100,9 +77,3 @@
 		</div>
 	</section>
 </template>
-
-<script>
-  export default {
-    name: "PortfolioSection"
-  }
-</script>

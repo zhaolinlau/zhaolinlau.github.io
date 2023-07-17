@@ -1,5 +1,5 @@
 <template>
-  <section class="section" id="contact">
+	<section class="section" id="contact">
 		<div class="container">
 			<p class="title has-text-centered mt-3">Contact Me (In progess...)</p>
 			<div class="columns">
@@ -31,9 +31,3 @@
 		</div>
 	</section>
 </template>
-
-<script>
-  export default {
-    name: "ContactSection"
-  }
-</script>
