@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer has-background-white">
+  <footer class="footer">
     <div class="content has-text-centered">
       <p class="mt-3">
         The website content
