@@ -1,17 +1,31 @@
+<script setup>
+import { ref } from 'vue'
+
+const isLoading = ref(false)
+
+function openLoading() {
+	isLoading.value = true
+}
+</script>
+
 <template>
+	<o-loading v-model:active="isLoading">
+		<o-icon pack="mdi" icon="loading" size="large"></o-icon>
+	</o-loading>
 	<section class="section" id="contact">
 		<div class="container">
 			<p class="title has-text-centered mt-3">Contact Me</p>
 			<div class="columns">
 				<div class="column is-6 is-offset-3">
-					<form class="box" action="https://formsubmit.co/c771b3ea7ca4ec5d9aa6e7621c42027e" method="post">
+					<form class="box" action="https://formsubmit.co/c771b3ea7ca4ec5d9aa6e7621c42027e" @submit="openLoading"
+						method="post">
 
 						<input type="hidden" name="_captcha" value="false">
 
 						<input type="hidden" name="_next" value="https://zhaolinlau.vercel.app/">
 
 						<o-field label="Subject">
-							<o-input required></o-input>
+							<o-input name="_subject" required></o-input>
 						</o-field>
 
 						<o-field label="Name">
