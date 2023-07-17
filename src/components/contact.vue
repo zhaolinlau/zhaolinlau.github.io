@@ -1,7 +1,7 @@
 <template>
 	<section class="section" id="contact">
 		<div class="container">
-			<p class="title has-text-centered mt-3">Contact Me (In progess...)</p>
+			<p class="title has-text-centered mt-3">Contact Me(In progess)</p>
 			<div class="columns">
 				<div class="column is-6 is-offset-3">
 					<form class="box" action="" method="post">

@@ -8,19 +8,19 @@
 					<div class="card">
 						<header class="card-header">
 							<p class="card-header-title">
-								<span>About Me</span>
+								<span>Zhaolin Lau</span>
 							</p>
 						</header>
 						<div class="card-content">
 							<figure class="image">
-								<img src="../assets/utmfd.png" alt="utmfd.png" />
+								<img src="../assets/zhaolinlau.png" alt="zhaolinlau.png" />
 							</figure>
 						</div>
 						<footer class="card-footer">
-							<a href="https://utmfd.vercel.app/" class="card-footer-item" target="_blank">
+							<a href="https://zhaolinlau.vercel.app/" class="card-footer-item">
 								Preview
 							</a>
-							<a href="https://github.com/Luetify/UTM-FD" class="card-footer-item" target="_blank">
+							<a href="https://github.com/zhaolinlau/zhaolinlau.github.io" class="card-footer-item" target="_blank">
 								Source Code
 							</a>
 						</footer>
