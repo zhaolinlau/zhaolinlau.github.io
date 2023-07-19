@@ -40,7 +40,7 @@ const showNav = ref(false);
 				</a>
 				<a class="navbar-item is-tab" href="#contact">
 					<span class="icon-text">
-						<o-icon icon="email"></o-icon>
+						<o-icon icon="mailbox"></o-icon>
 						<span>Contact</span>
 					</span>
 				</a>

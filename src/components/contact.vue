@@ -54,7 +54,12 @@ function submitForm(event) {
 	</o-loading>
 	<section class="section" id="contact">
 		<div class="container">
-			<p class="title has-text-centered mt-3">Contact Me</p>
+			<p class="title has-text-centered mt-3">
+				<span class="icon-text">
+					<o-icon size="medium" icon="mailbox"></o-icon>
+					<span>Contact Me</span>
+				</span>
+			</p>
 			<div class="columns">
 				<div class="column is-6 is-offset-3">
 					<form class="box" @submit="submitForm" method="post">
