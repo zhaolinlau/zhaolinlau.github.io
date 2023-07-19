@@ -22,7 +22,7 @@ const showNav = ref(false);
 			<div class="navbar-end">
 				<a class="navbar-item is-tab" href="#about">
 					<span class="icon-text">
-						<o-icon icon="information-variant"></o-icon>
+						<o-icon icon="information-variant-circle-outline"></o-icon>
 						<span>About</span>
 					</span>
 				</a>
@@ -44,11 +44,12 @@ const showNav = ref(false);
 						<span>Contact</span>
 					</span>
 				</a>
-				<div class="navbar-item">
-					<o-button type="primary" icon-left="file-download" disabled rounded>
-						<strong>Resume</strong>
-					</o-button>
-				</div>
+				<a class="navbar-item" href='https://ko-fi.com/V7V6EWJRF' target='_blank'>
+					<img src='https://storage.ko-fi.com/cdn/kofi1.png?v=3' alt='Buy Me a Coffee at ko-fi.com' />
+				</a>
+				<a class="navbar-item" href="https://www.buymeacoffee.com/zhaolinlau" target="_blank">
+					<img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee">
+				</a>
 			</div>
 		</div>
 	</nav>

@@ -40,7 +40,7 @@
 							<span>LinkedIn</span>
 						</span>
 					</a>
-					<a class="button is-info is-light" href="https://twitter.com/zhaolin_lau" target="_blank">
+					<a class="button is-info is-inverted" href="https://twitter.com/zhaolin_lau" target="_blank">
 						<span class="icon-text">
 							<span class="icon">
 								<span class="mdi mdi-twitter mdi-24px"></span>

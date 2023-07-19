@@ -1,7 +1,12 @@
 <template>
 	<section class="section has-text-centered" id="skills">
 		<div class="container">
-			<p class="title mt-3">My Skills</p>
+			<p class="title mt-3">
+				<span class="icon-text">
+					<o-icon size="medium" icon="code-tags"></o-icon>
+					<span>My Skills</span>
+				</span>
+			</p>
 			<div class="columns is-multiline">
 				<div class="column is-4">
 					<div class="box">

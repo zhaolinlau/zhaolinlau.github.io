@@ -1,7 +1,12 @@
 <template>
 	<section class="section" id="about">
 		<div class="container">
-			<p class="title mt-3 has-text-centered">About Me</p>
+			<p class="title mt-3 has-text-centered">
+				<span class="icon-text">
+					<o-icon size="medium" icon="information-variant-circle-outline"></o-icon>
+					<span>About Me</span>
+				</span>
+			</p>
 			<div class="columns is-multiline is-vcentered">
 				<div class="column is-4">
 					<figure class="image">

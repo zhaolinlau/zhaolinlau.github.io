@@ -1,7 +1,12 @@
 <template>
 	<section class="section" id="portfolio">
 		<div class="container">
-			<p class="title has-text-centered mt-3">Portfolio</p>
+			<p class="title has-text-centered mt-3">
+				<span class="icon-text">
+					<o-icon size="medium" icon="folder-file"></o-icon>
+					<span>My Portfolio</span>
+				</span>
+			</p>
 
 			<div class="columns is-multiline is-centered">
 				<div class="column is-4">
@@ -18,10 +23,16 @@
 						</div>
 						<footer class="card-footer">
 							<a href="https://zhaolinlau.vercel.app/" class="card-footer-item">
-								Preview
+								<span class="icon-text">
+									<o-icon icon="eye"></o-icon>
+									<span>Preview</span>
+								</span>
 							</a>
 							<a href="https://github.com/zhaolinlau/zhaolinlau.github.io" class="card-footer-item" target="_blank">
-								Source Code
+								<span class="icon-text">
+									<o-icon icon="github"></o-icon>
+									<span>Source Code</span>
+								</span>
 							</a>
 						</footer>
 					</div>
@@ -41,10 +52,16 @@
 						</div>
 						<footer class="card-footer">
 							<a href="https://utmfd.vercel.app/" class="card-footer-item" target="_blank">
-								Preview
+								<span class="icon-text">
+									<o-icon icon="eye"></o-icon>
+									<span>Preview</span>
+								</span>
 							</a>
 							<a href="https://github.com/Luetify/UTM-FD" class="card-footer-item" target="_blank">
-								Source Code
+								<span class="icon-text">
+									<o-icon icon="github"></o-icon>
+									<span>Source Code</span>
+								</span>
 							</a>
 						</footer>
 					</div>
@@ -64,11 +81,17 @@
 						</div>
 						<footer class="card-footer">
 							<a href="https://huawei-intelligent-world-2030.vercel.app/" class="card-footer-item" target="_blank">
-								Preview
+								<span class="icon-text">
+									<o-icon icon="eye"></o-icon>
+									<span>Preview</span>
+								</span>
 							</a>
 							<a href="https://github.com/zhaolinlau/huawei-intelligent-world-2030" class="card-footer-item"
 								target="_blank">
-								Source Code
+								<span class="icon-text">
+									<o-icon icon="github"></o-icon>
+									<span>Source Code</span>
+								</span>
 							</a>
 						</footer>
 					</div>
