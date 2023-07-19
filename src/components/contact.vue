@@ -3,8 +3,47 @@ import { ref } from 'vue'
 
 const isLoading = ref(false)
 
+const isSubmitted = ref(false)
+
+function openNotification() {
+	isSubmitted.value = true
+}
+
 function openLoading() {
 	isLoading.value = true
+}
+
+function resetForm() {
+	document.getElementsByName('_subject')[0].value = ''
+	document.getElementsByName('name')[0].value = ''
+	document.getElementsByName('email')[0].value = ''
+	document.getElementsByName('message')[0].value = ''
+}
+
+function submitForm(event) {
+	event.preventDefault()
+	openLoading()
+
+	const form = event.target
+	const formData = new FormData(form)
+
+	fetch('https://formsubmit.co/c771b3ea7ca4ec5d9aa6e7621c42027e', {
+		method: 'POST',
+		body: formData
+	})
+		.then(response => {
+			console.log(response)
+			if (response.ok) {
+				resetForm()
+				openNotification()
+			}
+		})
+		.catch(error => {
+			console.error(error)
+		})
+		.finally(() => {
+			isLoading.value = false
+		})
 }
 </script>
 
@@ -17,12 +56,12 @@ function openLoading() {
 			<p class="title has-text-centered mt-3">Contact Me</p>
 			<div class="columns">
 				<div class="column is-6 is-offset-3">
-					<form class="box" action="https://formsubmit.co/c771b3ea7ca4ec5d9aa6e7621c42027e" @submit="openLoading"
-						method="post">
-
+					<form class="box" @submit="submitForm" method="post">
+						<o-notification autoClose v-model:active="isSubmitted" duration="3000" closable variant="success"
+							aria-close-label="Close notification">
+							Your message has been sent successfully.
+						</o-notification>
 						<input type="hidden" name="_captcha" value="false">
-
-						<input type="hidden" name="_next" value="https://zhaolinlau.vercel.app/">
 
 						<o-field label="Subject">
 							<o-input name="_subject" required></o-input>
