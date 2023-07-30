@@ -1,12 +1,18 @@
 <script setup>
 import { ref } from 'vue';
 const showNav = ref(false);
+import VueScrollTo from 'vue-scrollto';
+const scrollToElement = (id) => {
+	VueScrollTo.scrollTo(id, {
+		duration: 500,
+	});
+};
 </script>
 
 <template>
-	<nav class="navbar is-fixed-top has-shadow" role="navigation" aria-label="main navigation">
+	<nav class="navbar is-fixed-top has-shadow" role="navigation" aria-label="main navigation" id="nav">
 		<div class="navbar-brand">
-			<a class="navbar-item" href="#">
+			<a class="navbar-item" @click="scrollToElement('#nav')">
 				<p class="title">Zhaolin Lau</p>
 			</a>
 
@@ -20,25 +26,25 @@ const showNav = ref(false);
 
 		<div class="navbar-menu" :class="{ 'is-active': showNav }">
 			<div class="navbar-end">
-				<a class="navbar-item is-tab" href="#about">
+				<a class="navbar-item is-tab" @click="scrollToElement('#about')">
 					<span class="icon-text">
 						<o-icon icon="information-variant-circle-outline"></o-icon>
 						<span>About</span>
 					</span>
 				</a>
-				<a class="navbar-item is-tab" href="#skills">
+				<a class="navbar-item is-tab" @click="scrollToElement('#skills')">
 					<span class="icon-text">
 						<o-icon icon="code-tags"></o-icon>
 						<span>Skills</span>
 					</span>
 				</a>
-				<a class="navbar-item is-tab" href="#portfolio">
+				<a class="navbar-item is-tab" @click="scrollToElement('#portfolio')">
 					<span class="icon-text">
 						<o-icon icon="folder-file"></o-icon>
 						<span>Portfolio</span>
 					</span>
 				</a>
-				<a class="navbar-item is-tab" href="#contact">
+				<a class="navbar-item is-tab" @click="scrollToElement('#contact')">
 					<span class="icon-text">
 						<o-icon icon="mailbox"></o-icon>
 						<span>Contact</span>
