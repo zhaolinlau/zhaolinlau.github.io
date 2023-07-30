@@ -45,10 +45,10 @@ const showNav = ref(false);
 					</span>
 				</a>
 				<a class="navbar-item" href='https://ko-fi.com/V7V6EWJRF' target='_blank'>
-					<img src='https://storage.ko-fi.com/cdn/kofi1.png?v=3' alt='Buy Me a Coffee at ko-fi.com' />
+					<nuxt-img src='img/kofi1.webp' alt='Buy Me a Coffee at ko-fi.com' />
 				</a>
 				<a class="navbar-item" href="https://www.buymeacoffee.com/zhaolinlau" target="_blank">
-					<img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee">
+					<nuxt-img src="img/default-yellow.png" alt="Buy Me A Coffee" />
 				</a>
 			</div>
 		</div>

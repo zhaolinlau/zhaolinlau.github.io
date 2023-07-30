@@ -114,7 +114,7 @@ function submitForm(event) {
 			<div class="columns is-multiline is-vcentered">
 				<div class="column is-4">
 					<figure class="image">
-						<nuxt-img class="is-rounded" width="100" height="100" src="img/me.jpg" alt="LAU ZHAO LIN" />
+						<nuxt-img class="is-rounded" src="img/me.jpg" alt="LAU ZHAO LIN" />
 					</figure>
 				</div>
 				<div class="column is-8">
@@ -357,9 +357,5 @@ function submitForm(event) {
 <style>
 html {
 	scroll-behavior: smooth;
-}
-
-img {
-	pointer-events: none;
 }
 </style>
