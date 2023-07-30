@@ -5,7 +5,7 @@ const isLoading = ref(false)
 
 const isSubmitted = ref(false)
 
-const captcha = ref('false')
+const captcha = ref(false)
 
 function openNotification() {
 	isSubmitted.value = true
@@ -114,7 +114,7 @@ function submitForm(event) {
 			<div class="columns is-multiline is-vcentered">
 				<div class="column is-4">
 					<figure class="image">
-						<img class="is-rounded" width="100" height="100" src="img/me.jpg" alt="LAU ZHAO LIN">
+						<nuxt-img class="is-rounded" width="100" height="100" src="img/me.jpg" alt="LAU ZHAO LIN" />
 					</figure>
 				</div>
 				<div class="column is-8">
@@ -224,7 +224,7 @@ function submitForm(event) {
 						</header>
 						<div class="card-content">
 							<figure class="image">
-								<img src="img/zhaolinlau.png" alt="zhaolinlau.png" />
+								<nuxt-img src="img/zhaolinlau.png" alt="zhaolinlau.png" />
 							</figure>
 						</div>
 						<footer class="card-footer">
@@ -253,7 +253,7 @@ function submitForm(event) {
 						</header>
 						<div class="card-content">
 							<figure class="image">
-								<img src="img/utmfd.png" alt="utmfd.png" />
+								<nuxt-img src="img/utmfd.png" alt="utmfd.png" />
 							</figure>
 						</div>
 						<footer class="card-footer">
@@ -282,7 +282,7 @@ function submitForm(event) {
 						</header>
 						<div class="card-content">
 							<figure class="image">
-								<img src="img/huawei-intelligent-world-2030.png" alt="huawei-intelligent-world-2030.png" />
+								<nuxt-img src="img/huawei-intelligent-world-2030.png" alt="huawei-intelligent-world-2030.png" />
 							</figure>
 						</div>
 						<footer class="card-footer">
