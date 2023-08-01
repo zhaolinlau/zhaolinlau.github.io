@@ -1,0 +1,67 @@
+{
+  "compilerOptions": {
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "jsx": "preserve",
+    "jsxFactory": "h",
+    "jsxFragmentFactory": "Fragment",
+    "paths": {
+      "#imports": [
+        "C:/xampp/htdocs/zhaolinlau.github.io/.nuxt/types/nitro-imports"
+      ],
+      "#paths": [
+        "C:/xampp/htdocs/zhaolinlau.github.io/node_modules/.pnpm/nuxt@3.6.5_@types+node@20.4.5/node_modules/nuxt/dist/core/runtime/nitro/paths"
+      ],
+      "~": [
+        "C:/xampp/htdocs/zhaolinlau.github.io"
+      ],
+      "~/*": [
+        "C:/xampp/htdocs/zhaolinlau.github.io/*"
+      ],
+      "@": [
+        "C:/xampp/htdocs/zhaolinlau.github.io"
+      ],
+      "@/*": [
+        "C:/xampp/htdocs/zhaolinlau.github.io/*"
+      ],
+      "~~": [
+        "C:/xampp/htdocs/zhaolinlau.github.io"
+      ],
+      "~~/*": [
+        "C:/xampp/htdocs/zhaolinlau.github.io/*"
+      ],
+      "@@": [
+        "C:/xampp/htdocs/zhaolinlau.github.io"
+      ],
+      "@@/*": [
+        "C:/xampp/htdocs/zhaolinlau.github.io/*"
+      ],
+      "assets": [
+        "C:/xampp/htdocs/zhaolinlau.github.io/assets"
+      ],
+      "public": [
+        "C:/xampp/htdocs/zhaolinlau.github.io/public"
+      ],
+      "public/*": [
+        "C:/xampp/htdocs/zhaolinlau.github.io/public/*"
+      ],
+      "#image": [
+        "C:/xampp/htdocs/zhaolinlau.github.io/node_modules/.pnpm/@nuxt+image@1.0.0-rc.1/node_modules/@nuxt/image/dist/runtime"
+      ],
+      "#image/*": [
+        "C:/xampp/htdocs/zhaolinlau.github.io/node_modules/.pnpm/@nuxt+image@1.0.0-rc.1/node_modules/@nuxt/image/dist/runtime/*"
+      ]
+    }
+  },
+  "include": [
+    "C:/xampp/htdocs/zhaolinlau.github.io/.nuxt/types/nitro-nuxt.d.ts",
+    "./types/nitro.d.ts",
+    "../**/*",
+    "../server/**/*"
+  ]
+}
