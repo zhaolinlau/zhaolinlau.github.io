@@ -367,8 +367,4 @@ function submitForm(event) {
 html {
 	scroll-behavior: smooth;
 }
-
-nuxt-img {
-	pointer-events: none;
-}
 </style>
