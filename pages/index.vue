@@ -7,12 +7,18 @@ const isSubmitted = ref(false)
 
 const captcha = ref(false)
 
+const isSending = ref(false)
+
 function openNotification() {
 	isSubmitted.value = true
 }
 
 function openLoading() {
 	isLoading.value = true
+}
+
+function Sending() {
+	isSending.value = true
 }
 
 function resetForm(form) {
@@ -24,6 +30,7 @@ function resetForm(form) {
 function submitForm(event) {
 	event.preventDefault()
 	openLoading()
+	Sending()
 
 	const form = event.target
 	const formData = new FormData(form)
@@ -44,6 +51,7 @@ function submitForm(event) {
 		.finally(() => {
 			openNotification()
 			isLoading.value = false
+			isSending.value = false
 		})
 }
 </script>
@@ -345,7 +353,8 @@ function submitForm(event) {
 						</o-field>
 
 						<o-field>
-							<o-button nativeType="submit" icon-left="send" variant="primary" rounded expanded>Send</o-button>
+							<o-button nativeType="submit" icon-left="send" variant="primary" :loading="isSending" rounded
+								expanded>Send</o-button>
 						</o-field>
 					</form>
 				</div>
