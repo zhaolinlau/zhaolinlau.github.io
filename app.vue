@@ -11,8 +11,10 @@ useSeoMeta({
 
 <template>
 	<div>
-		<NuxtLayout>
-			<NuxtPage />
-		</NuxtLayout>
+		<ClientOnly fallback-tag="progress" fallback="Loading...">
+			<NuxtLayout>
+				<NuxtPage />
+			</NuxtLayout>
+		</ClientOnly>
 	</div>
 </template>
