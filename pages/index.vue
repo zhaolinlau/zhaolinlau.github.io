@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue'
+const isSubmittedModal = ref(false)
 
 const isLoading = ref(false)
 
@@ -11,6 +12,7 @@ const isSending = ref(false)
 
 function openNotification() {
 	isSubmitted.value = true
+	isSubmittedModal.value = true
 }
 
 function openLoading() {
@@ -25,6 +27,12 @@ function resetForm(form) {
 	const captchaValue = form.elements['_captcha'].value
 	form.reset()
 	form.elements['_captcha'].value = captchaValue
+}
+
+function refreshPage() {
+	isSubmittedModal.value = false
+	openLoading()
+	location.reload()
 }
 
 function submitForm(event) {
@@ -446,4 +454,18 @@ function submitForm(event) {
 			</div>
 		</div>
 	</section>
+
+	<o-modal v-model:active="isSubmittedModal" canCancel="[]">
+		<div class="card">
+			<div class="card-content has-text-centered">
+				<o-icon icon="check-circle-outline" variant="success" size="large" />
+				<p class="title">
+					Your message has been sent successfully.
+				</p>
+			</div>
+			<div class="card-footer">
+				<o-button class="card-footer-item" icon-left="hand-okay" variant="primary" @click="refreshPage">OK</o-button>
+			</div>
+		</div>
+	</o-modal>
 </template>
