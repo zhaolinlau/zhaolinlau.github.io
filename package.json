@@ -19,6 +19,7 @@
 		"@mdi/font": "^7.2.96",
 		"@oruga-ui/oruga-next": "^0.6.0",
 		"@oruga-ui/theme-bulma": "^0.2.11",
+		"animate.css": "^4.1.1",
 		"vue-scrollto": "^2.20.0"
 	}
 }
