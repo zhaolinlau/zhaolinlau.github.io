@@ -11,8 +11,8 @@
 	"devDependencies": {
 		"@nuxt/devtools": "latest",
 		"@nuxt/image": "1.0.0-rc.1",
-		"@types/node": "^20.5.1",
-		"nuxt": "^3.6.5",
+		"@types/node": "^20.5.6",
+		"nuxt": "^3.7.0",
 		"nuxt-simple-robots": "^3.1.1"
 	},
 	"dependencies": {
