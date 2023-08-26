@@ -57,6 +57,7 @@ function submitForm(event) {
 </script>
 
 <template>
+	<BackTop />
 	<section class="hero is-fullheight is-dark is-bold">
 		<div class="hero-body">
 			<div class="container">
