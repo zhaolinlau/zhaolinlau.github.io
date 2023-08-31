@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
 	devtools: { enabled: true },
 
-	modules: ["@nuxt/image", "nuxt-simple-robots"],
+	modules: ["@nuxt/image"],
 
 	plugins: ["plugins/oruga.ts"],
 
