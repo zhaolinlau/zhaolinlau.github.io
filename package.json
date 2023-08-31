@@ -12,8 +12,7 @@
 		"@nuxt/devtools": "latest",
 		"@nuxt/image": "1.0.0-rc.1",
 		"@types/node": "^20.5.7",
-		"nuxt": "^3.7.0",
-		"nuxt-simple-robots": "^3.1.2"
+		"nuxt": "^3.7.0"
 	},
 	"dependencies": {
 		"@fortawesome/fontawesome-free": "^6.4.2",

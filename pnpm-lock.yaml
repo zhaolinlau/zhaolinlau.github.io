@@ -37,9 +37,6 @@ devDependencies:
   nuxt:
     specifier: ^3.7.0
     version: 3.7.0(@types/node@20.5.7)
-  nuxt-simple-robots:
-    specifier: ^3.1.2
-    version: 3.1.2
 
 packages:
 
@@ -4881,47 +4878,6 @@ packages:
       fsevents: 2.3.3
     dev: true
 
-  /nuxt-simple-robots@3.1.2:
-    resolution: {integrity: sha512-GxmMOpR5qWmrV9xpsEyCSVPp5cKsxfA8GHla3z59KPxTZxzASwzyi1TEPb9uv6VG4vepdfV8WhlB/1ckREfuCg==}
-    dependencies:
-      '@nuxt/kit': 3.7.0
-      defu: 6.1.2
-      nuxt-site-config: 1.0.11
-      nuxt-site-config-kit: 1.0.11
-      pathe: 1.1.1
-      ufo: 1.3.0
-    transitivePeerDependencies:
-      - rollup
-      - supports-color
-    dev: true
-
-  /nuxt-site-config-kit@1.0.11:
-    resolution: {integrity: sha512-kGt/5+FLMxHudTImWNSOXt0zYcfA1be/3HgVX/CMxDU2sir2wq4DCpk4WNRcRhewEkmRC5uRsCPVyvbqqVCIgw==}
-    dependencies:
-      '@nuxt/kit': 3.7.0
-      '@nuxt/schema': 3.7.0
-      pkg-types: 1.0.3
-      site-config-stack: 1.0.11
-      ufo: 1.3.0
-    transitivePeerDependencies:
-      - rollup
-      - supports-color
-    dev: true
-
-  /nuxt-site-config@1.0.11:
-    resolution: {integrity: sha512-L+R8785j3An3QIWo6LdrtX2L123iNkp91gLbw1FRnj686WbYMD0FTCqO5hEcVsLdIeBAVPszRMLcxISN4B7NIQ==}
-    dependencies:
-      '@nuxt/kit': 3.7.0
-      '@nuxt/schema': 3.7.0
-      nuxt-site-config-kit: 1.0.11
-      pathe: 1.1.1
-      site-config-stack: 1.0.11
-      ufo: 1.3.0
-    transitivePeerDependencies:
-      - rollup
-      - supports-color
-    dev: true
-
   /nuxt@3.7.0(@types/node@20.5.7):
     resolution: {integrity: sha512-y0/xHYqwuJt20r26xezjpr74FLWR144dMpwSxZ/O2XXUrQUnyO7vHm3fEY4vi+miKbf343YMH5B78GXAELO/Vw==}
     engines: {node: ^14.18.0 || >=16.10.0}
@@ -6069,12 +6025,6 @@ packages:
 
   /sisteransi@1.0.5:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
-    dev: true
-
-  /site-config-stack@1.0.11:
-    resolution: {integrity: sha512-JPHqf0s5/3DEd0TkT9noGlMNNOEVz0bVHbfHDTcebup97poNwZ5CXjj1FYYcwRVbqa7cJjgi6jTmo2b0XslQ6g==}
-    dependencies:
-      ufo: 1.3.0
     dev: true
 
   /slash@4.0.0:
