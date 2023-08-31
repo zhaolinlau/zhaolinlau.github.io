@@ -16,7 +16,7 @@
 
 	<section class="section" id="about">
 		<div class="container">
-			<p class="title mt-3 has-text-centered has-text-white">
+			<p class="title mt-5 has-text-centered has-text-white">
 				<span class="icon-text">
 					<o-icon size="medium" icon="information-variant-circle-outline"></o-icon>
 					<span>About Me</span>
@@ -43,7 +43,7 @@
 
 	<section class="section has-text-centered" id="skills">
 		<div class="container">
-			<p class="title mt-3 has-text-white">
+			<p class="title mt-5 has-text-white">
 				<span class="icon-text">
 					<o-icon size="medium" icon="code-tags"></o-icon>
 					<span>My Skills</span>
@@ -56,7 +56,7 @@
 
 	<section class="section" id="portfolio">
 		<div class="container">
-			<p class="title has-text-centered mt-3 has-text-white">
+			<p class="title has-text-centered mt-5 has-text-white">
 				<span class="icon-text">
 					<o-icon size="medium" icon="folder-file"></o-icon>
 					<span>My Portfolio</span>
@@ -69,7 +69,7 @@
 
 	<section class="section" id="contact">
 		<div class="container">
-			<p class="title has-text-centered mt-3 has-text-white">
+			<p class="title has-text-centered mt-5 has-text-white">
 				<span class="icon-text">
 					<o-icon size="medium" icon="mailbox"></o-icon>
 					<span>Contact Me</span>
