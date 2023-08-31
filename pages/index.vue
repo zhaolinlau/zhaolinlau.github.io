@@ -9,46 +9,36 @@
 					A Passionate Web Developer From Malaysia
 				</p>
 				<div class="buttons">
-					<a class="button is-dark" href="https://github.com/zhaolinlau" target="_blank">
+					<o-button tag="a" variant="dark" href="https://github.com/zhaolinlau" target="_blank">
 						<span class="icon-text">
-							<span class="icon">
-								<span class="mdi mdi-github mdi-24px"></span>
-							</span>
+							<o-icon pack="fab" size="medium" icon="github"></o-icon>
 							<span>GitHub</span>
 						</span>
-					</a>
-					<a class="button is-link" href="https://www.facebook.com/zhaolinlau/" target="_blank">
+					</o-button>
+					<o-button tag="a" variant="link" href="https://www.facebook.com/zhaolinlau/" target="_blank">
 						<span class="icon-text">
-							<span class="icon">
-								<span class="mdi mdi-facebook mdi-24px"></span>
-							</span>
+							<o-icon pack="fab" size="medium" icon="facebook"></o-icon>
 							<span>Facebook</span>
 						</span>
-					</a>
-					<a class="button is-danger is-light" href="https://www.instagram.com/zhaolin_lau/" target="_blank">
+					</o-button>
+					<o-button tag="a" variant="danger is-light" href="https://www.instagram.com/zhaolin_lau/" target="_blank">
 						<span class="icon-text">
-							<span class="icon">
-								<span class="mdi mdi-instagram mdi-24px"></span>
-							</span>
+							<o-icon pack="fab" size="medium" icon="instagram"></o-icon>
 							<span>Instagram</span>
 						</span>
-					</a>
-					<a class="button is-info" href="https://www.linkedin.com/in/zhaolinlau/" target="_blank">
+					</o-button>
+					<o-button tag="a" variant="info" href="https://www.linkedin.com/in/zhaolinlau/" target="_blank">
 						<span class="icon-text">
-							<span class="icon">
-								<span class="mdi mdi-linkedin mdi-24px"></span>
-							</span>
+							<o-icon pack="fab" size="medium" icon="linkedin"></o-icon>
 							<span>LinkedIn</span>
 						</span>
-					</a>
-					<a class="button is-info is-inverted" href="https://twitter.com/zhaolin_lau" target="_blank">
+					</o-button>
+					<o-button tag="a" variant="light" inverted href="https://twitter.com/zhaolin_lau" target="_blank">
 						<span class="icon-text">
-							<span class="icon">
-								<span class="mdi mdi-twitter mdi-24px"></span>
-							</span>
+							<o-icon pack="fab" size="medium" icon="x-twitter"></o-icon>
 							<span>Twitter</span>
 						</span>
-					</a>
+					</o-button>
 				</div>
 			</div>
 		</div>

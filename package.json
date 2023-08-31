@@ -16,6 +16,7 @@
 		"nuxt-simple-robots": "^3.1.2"
 	},
 	"dependencies": {
+		"@fortawesome/fontawesome-free": "^6.4.2",
 		"@mdi/font": "^7.2.96",
 		"@oruga-ui/oruga-next": "^0.6.0",
 		"@oruga-ui/theme-bulma": "^0.2.11",
