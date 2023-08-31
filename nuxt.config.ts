@@ -5,10 +5,4 @@ export default defineNuxtConfig({
 	modules: ["@nuxt/image"],
 
 	plugins: ["plugins/oruga.ts"],
-
-	nitro: {
-		prerender: {
-			crawlLinks: true,
-		},
-	},
 });

@@ -10,10 +10,10 @@ const scrollToElement = (id) => {
 </script>
 
 <template>
-	<nav class="navbar is-fixed-top has-shadow" role="navigation" aria-label="main navigation" id="nav">
+	<nav class="navbar is-fixed-top has-shadow is-black" role="navigation" aria-label="main navigation" id="nav">
 		<div class="navbar-brand">
 			<a class="navbar-item" @click="scrollToElement('#nav')">
-				<p class="title">Zhaolin Lau</p>
+				<p class="title has-text-white">Zhaolin Lau</p>
 			</a>
 
 			<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" @click="showNav = !showNav"

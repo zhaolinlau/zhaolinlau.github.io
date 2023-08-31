@@ -69,47 +69,67 @@ function submitForm(event) {
 	</o-loading>
 
 	<o-modal v-model:active="isSubmittedModal" canCancel="[]">
-		<div class="card">
+		<div class="card has-background-dark">
 			<div class="card-content has-text-centered">
 				<o-icon icon="check-circle-outline" variant="success" size="large" />
-				<p class="title">
+				<p class="title has-text-light">
 					Your message has been sent successfully.
 				</p>
 			</div>
 			<div class="card-footer">
-				<o-button class="card-footer-item" icon-left="hand-okay" variant="primary" @click="refreshPage">OK</o-button>
+				<o-button class="card-footer-item" icon-left="hand-okay" variant="dark" inverted @click="refreshPage">OK</o-button>
 			</div>
 		</div>
 	</o-modal>
 
-	<form class="box" @submit="submitForm" method="post">
+	<form class="box has-background-dark" @submit="submitForm" method="post">
 		<o-notification autoClose v-model:active="isSubmitted" message="Your message has been sent successfully."
-			iconSize="medium" duration="5000" type="success" closable variant="success"
+			iconSize="medium" duration="5000" type="success" closable variant="black"
 			aria-close-label="Close notification"></o-notification>
 
 		<o-field label="Captcha" class="is-hidden">
 			<o-input name="_captcha" v-model="captcha" required></o-input>
 		</o-field>
 
-		<o-field label="Subject">
-			<o-input icon="format-title" name="_subject" required></o-input>
-		</o-field>
-
-		<o-field label="Name">
-			<o-input icon="account" name="name" required></o-input>
-		</o-field>
-
-		<o-field label="Email">
-			<o-input icon="email" type="email" name="email" required></o-input>
-		</o-field>
-
-		<o-field label="Message">
-			<o-input icon="message-text" type="textarea" name="message" required></o-input>
+		<o-field>
+			<template #label>
+				<span class="has-text-light">
+					Subject
+				</span>
+			</template>
+			<o-input class="has-background-dark has-text-light" icon="format-title" name="_subject" required></o-input>
 		</o-field>
 
 		<o-field>
-			<o-button nativeType="submit" icon-left="send" variant="primary" :loading="isSending" rounded
-				expanded>Send</o-button>
+			<template #label>
+				<span class="has-text-light">
+					Name
+				</span>
+			</template>
+			<o-input class="has-background-dark has-text-light" icon="account" name="name" required></o-input>
+		</o-field>
+
+		<o-field>
+			<template #label>
+				<span class="has-text-light">
+					Email
+				</span>
+			</template>
+			<o-input class="has-background-dark has-text-light" icon="email" type="email" name="email" required></o-input>
+		</o-field>
+
+		<o-field>
+			<template #label>
+				<span class="has-text-light">
+					Message
+				</span>
+			</template>
+			<o-input class="has-background-dark has-text-light" icon="message-text" type="textarea" name="message"
+				required></o-input>
+		</o-field>
+
+		<o-field>
+			<o-button nativeType="submit" icon-left="send" variant="black" :loading="isSending" rounded expanded>Send</o-button>
 		</o-field>
 	</form>
 </template>

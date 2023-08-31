@@ -18,7 +18,7 @@ useSeoMeta({
 </script>
 
 <template>
-	<div>
+	<div class="has-background-black has-text-white">
 		<ClientOnly fallback-tag="progress" fallback="Loading...">
 			<NuxtLayout>
 				<NuxtPage />
@@ -26,3 +26,15 @@ useSeoMeta({
 		</ClientOnly>
 	</div>
 </template>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+	background-color: black;
+}
+
+* {
+	font-family: 'Merienda', cursive;
+}
+</style>

@@ -1,89 +1,63 @@
+<script setup>
+const skills = [
+	{
+		icon: 'nuxt',
+		title: 'Nuxt',
+	},
+	{
+		icon: 'bootstrap',
+		title: 'Bootstrap',
+	},
+	{
+		icon: 'laravel',
+		title: 'Laravel',
+	},
+	{
+		icon: 'language-markdown',
+		title: 'Markdown',
+	},
+	{
+		icon: 'vuetify',
+		title: 'Vuetify',
+	},
+	{
+		icon: 'vuejs',
+		title: 'Vue.js',
+	},
+	{
+		icon: 'bulma',
+		title: 'Bulma',
+	},
+	{
+		icon: 'dolphin',
+		title: 'MySQL',
+	},
+	{
+		icon: 'language-php',
+		title: 'PHP',
+	},
+	{
+		icon: 'language-javascript',
+		title: 'JavaScript',
+	},
+	{
+		icon: 'language-css3',
+		title: 'CSS',
+	},
+	{
+		icon: 'language-html5',
+		title: 'HTML',
+	},
+]
+</script>
+
 <template>
 	<div class="columns is-multiline">
-
-		<div class="column is-4">
-			<div class="box">
-				<o-icon icon="nuxt" size="large"></o-icon>
-				<p class="title is-4">Nuxt</p>
+		<div class="column is-4" v-for="skill in skills">
+			<div class="box has-background-dark has-text-light">
+				<o-icon :icon="skill.icon" size="large"></o-icon>
+				<p class="title is-4 has-text-light">{{ skill.title }}</p>
 			</div>
 		</div>
-
-		<div class="column is-4">
-			<div class="box">
-				<o-icon icon="bootstrap" size="large"></o-icon>
-				<p class="title is-4">Bootstrap</p>
-			</div>
-		</div>
-
-		<div class="column is-4">
-			<div class="box">
-				<o-icon icon="laravel" size="large"></o-icon>
-				<p class="title is-4">Laravel</p>
-			</div>
-		</div>
-
-		<div class="column is-4">
-			<div class="box">
-				<o-icon icon="language-markdown" size="large"></o-icon>
-				<p class="title is-4">Markdown</p>
-			</div>
-		</div>
-
-		<div class="column is-4">
-			<div class="box">
-				<o-icon icon="vuetify" size="large"></o-icon>
-				<p class="title is-4">Vuetify</p>
-			</div>
-		</div>
-
-		<div class="column is-4">
-			<div class="box">
-				<o-icon icon="vuejs" size="large"></o-icon>
-				<p class="title is-4">Vue.js</p>
-			</div>
-		</div>
-
-		<div class="column is-4">
-			<div class="box">
-				<o-icon icon="bulma" size="large"></o-icon>
-				<p class="title is-4">Bulma</p>
-			</div>
-		</div>
-
-		<div class="column is-4">
-			<div class="box">
-				<o-icon icon="dolphin" size="large"></o-icon>
-				<p class="title is-4">MySQL</p>
-			</div>
-		</div>
-
-		<div class="column is-4">
-			<div class="box">
-				<o-icon icon="language-php" size="large"></o-icon>
-				<p class="title is-4">PHP</p>
-			</div>
-		</div>
-
-		<div class="column is-4">
-			<div class="box">
-				<o-icon icon="language-javascript" size="large"></o-icon>
-				<p class="title is-4">JavaScript</p>
-			</div>
-		</div>
-
-		<div class="column is-4">
-			<div class="box">
-				<o-icon icon="language-css3" size="large"></o-icon>
-				<p class="title is-4">CSS</p>
-			</div>
-		</div>
-
-		<div class="column is-4">
-			<div class="box">
-				<o-icon icon="language-html5" size="large"></o-icon>
-				<p class="title is-4">HTML</p>
-			</div>
-		</div>
-
 	</div>
 </template>
