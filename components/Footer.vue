@@ -1,5 +1,5 @@
 <template>
-	<footer class="footer mt-3 has-background-black">
+	<footer class="footer mt-5 has-background-black">
 		<div class="content has-text-centered has-text-white">
 			<p>
 				Source code licensed under
