@@ -26,7 +26,7 @@ const socials = [
 	},
 	{
 		variant: 'light',
-		href: 'https://twitter.com/zhaolin_lau',
+		href: 'https://twitter.com/zhaolinlau',
 		icon: 'x-twitter',
 		title: 'Twitter',
 	},
