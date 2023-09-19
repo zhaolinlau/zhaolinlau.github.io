@@ -11,8 +11,8 @@
 	"devDependencies": {
 		"@nuxt/devtools": "latest",
 		"@nuxt/image": "1.0.0-rc.1",
-		"@types/node": "^20.5.7",
-		"nuxt": "^3.7.0"
+		"@types/node": "^20.6.2",
+		"nuxt": "^3.7.3"
 	},
 	"dependencies": {
 		"@fortawesome/fontawesome-free": "^6.4.2",
