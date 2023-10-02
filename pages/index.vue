@@ -31,7 +31,7 @@
 				<div class="column is-8">
 					<p class="subtitle has-text-centered has-text-white">Jack of all trades, master of "some"</p>
 					<p class="has-text-justified">
-						Web developer with more than <b>3 years</b> of well-rounded experience with a diploma in the field of
+						Web developer with more than <b>2 years</b> of well-rounded experience with a diploma in the field of
 						<b>Computer Science</b>, extensive knowledge of modern Web techniques and love for <b>Milo</b>. Looking for an
 						opportunity to work and upgrade, as well as being involved in an organization that believes in gaining a
 						competitive edge and giving back to the community.
