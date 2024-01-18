@@ -19,7 +19,7 @@ useSeoMeta({
 
 <template>
 	<div class="has-background-black has-text-white">
-		<ClientOnly fallback-tag="progress" fallback="Loading...">
+		<ClientOnly fallback-tag="span" fallback="Loading...">
 			<NuxtLayout>
 				<NuxtPage />
 			</NuxtLayout>
