@@ -1,6 +1,13 @@
 <script setup>
 const portfolios = [
 	{
+		title: 'To-Do List',
+		src: 'to-do-list.png',
+		domain: 'https://zhaolinlau-to-do-list.vercel.app/',
+		public: true,
+		repo: 'https://github.com/zhaolinlau/to-do-list',
+	},
+	{
 		title: 'UMPSA x Huawei Mobile App Competition',
 		src: 'uxhmac.png',
 		domain: 'https://uxhmac.vercel.app/',
@@ -48,11 +55,13 @@ const portfolios = [
 						<span>{{ portfolio.title }}</span>
 					</p>
 				</header>
+
 				<div class="card-content">
 					<figure class="image">
 						<nuxt-img :src="`img/${portfolio.src}`" :alt="portfolio.src" />
 					</figure>
 				</div>
+
 				<footer class="card-footer">
 					<a :href="portfolio.domain" class="card-footer-item has-text-primary" target="_blank">
 						<span class="icon-text">
