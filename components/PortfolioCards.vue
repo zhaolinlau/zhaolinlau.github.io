@@ -1,9 +1,9 @@
 <script setup>
 const portfolios = ref([
 	{
-		title: 'To-Do List',
+		title: 'To-do List',
 		src: 'to-do-list.png',
-		domain: 'https://zhaolinlau-to-do-list.vercel.app/',
+		domain: 'https://to-do-list-dun-ten-18.vercel.app/',
 		public: true,
 		repo: 'https://github.com/zhaolinlau/to-do-list',
 		tags: [
