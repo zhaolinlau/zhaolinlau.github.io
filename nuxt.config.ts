@@ -5,6 +5,7 @@ export default defineNuxtConfig({
 		shim: false,
 	},
 	modules: [
+		"nuxt-icon",
 		"@nuxt/image",
 		"@nuxtjs/google-fonts",
 		[

@@ -1,52 +1,60 @@
 <script setup>
 const skills = [
 	{
-		icon: 'nuxt',
-		title: 'Nuxt',
+		icon: 'logos:supabase-icon',
+		title: 'Supabase'
 	},
 	{
-		icon: 'bootstrap',
-		title: 'Bootstrap',
+		icon: 'logos:nuxt-icon',
+		title: 'Nuxt'
 	},
 	{
-		icon: 'laravel',
-		title: 'Laravel',
+		icon: 'logos:bootstrap',
+		title: 'Bootstrap'
 	},
 	{
-		icon: 'language-markdown',
-		title: 'Markdown',
+		icon: 'logos:laravel',
+		title: 'Laravel'
 	},
 	{
-		icon: 'vuetify',
-		title: 'Vuetify',
+		icon: 'logos:markdown',
+		title: 'Markdown'
 	},
 	{
-		icon: 'vuejs',
-		title: 'Vue.js',
+		icon: 'logos:vuetifyjs',
+		title: 'Vuetify'
 	},
 	{
-		icon: 'bulma',
-		title: 'Bulma',
+		icon: 'logos:vue',
+		title: 'Vue'
 	},
 	{
-		icon: 'dolphin',
-		title: 'MySQL',
+		icon: 'logos:bulma',
+		title: 'Bulma'
 	},
 	{
-		icon: 'language-php',
-		title: 'PHP',
+		icon: 'logos:git-icon',
+		title: 'git'
 	},
 	{
-		icon: 'language-javascript',
-		title: 'JavaScript',
+		icon: 'logos:mysql',
+		title: 'MySQL'
 	},
 	{
-		icon: 'language-css3',
-		title: 'CSS',
+		icon: 'logos:php',
+		title: 'PHP'
 	},
 	{
-		icon: 'language-html5',
-		title: 'HTML',
+		icon: 'logos:javascript',
+		title: 'JavaScript'
+	},
+	{
+		icon: 'logos:css-3',
+		title: 'CSS'
+	},
+	{
+		icon: 'logos:html-5',
+		title: 'HTML'
 	},
 ]
 </script>
@@ -55,7 +63,7 @@ const skills = [
 	<div class="columns is-multiline">
 		<div class="column is-4" v-for="skill in skills">
 			<div class="box">
-				<OIcon :icon="skill.icon" size="large" />
+				<Icon :name="skill.icon" class="icon is-large" />
 				<p class="title is-4">{{ skill.title }}</p>
 			</div>
 		</div>

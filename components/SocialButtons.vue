@@ -3,31 +3,31 @@ const socials = [
 	{
 		variant: 'dark',
 		to: 'https://github.com/zhaolinlau',
-		icon: 'github',
+		icon: 'line-md:github',
 		title: 'GitHub',
 	},
 	{
 		variant: 'link',
 		to: 'https://www.facebook.com/zhaolinlau/',
-		icon: 'facebook',
+		icon: 'line-md:facebook',
 		title: 'Facebook',
 	},
 	{
 		variant: 'danger is-light',
 		to: 'https://www.instagram.com/zhaolin_lau/',
-		icon: 'instagram',
+		icon: 'line-md:instagram',
 		title: 'Instagram',
 	},
 	{
 		variant: 'info',
 		to: 'https://www.linkedin.com/in/zhaolinlau/',
-		icon: 'linkedin',
+		icon: 'line-md:linkedin',
 		title: 'LinkedIn',
 	},
 	{
 		variant: 'light',
 		to: 'https://twitter.com/zhaolinlau',
-		icon: 'x-twitter',
+		icon: 'line-md:twitter-x',
 		title: 'Twitter',
 	},
 ]
@@ -37,7 +37,7 @@ const socials = [
 	<div class="buttons">
 		<OButton tag="NuxtLink" :variant="social.variant" :to="social.to" target="_blank" v-for="social in socials">
 			<span class="icon-text">
-				<OIcon pack="fab" size="medium" :icon="social.icon" />
+				<Icon :name="social.icon" />
 				<span>{{ social.title }}</span>
 			</span>
 		</OButton>
