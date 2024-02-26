@@ -16,7 +16,7 @@
 
 	<section class="section" id="about">
 		<div class="container">
-			<p class="title mt-5 has-text-centered has-text-white">
+			<p class="title mt-5 has-text-centered">
 				<span class="icon-text">
 					<OIcon size="medium" icon="information-variant-circle-outline" />
 					<span>About Me</span>
@@ -29,7 +29,7 @@
 					</figure>
 				</div>
 				<div class="column is-8">
-					<p class="subtitle has-text-centered has-text-white">Jack of all trades, master of "some"</p>
+					<p class="subtitle has-text-centered">Jack of all trades, master of "some"</p>
 					<p class="has-text-justified">
 						Web developer with more than <b>2 years</b> of well-rounded experience with a diploma in the field of
 						<b>Computer Science</b>, extensive knowledge of modern Web techniques and love for <b>Milo</b>. Looking for an
@@ -43,7 +43,7 @@
 
 	<section class="section has-text-centered" id="skills">
 		<div class="container">
-			<p class="title mt-5 has-text-white">
+			<p class="title mt-5">
 				<span class="icon-text">
 					<OIcon size="medium" icon="code-tags" />
 					<span>My Skills</span>
@@ -56,7 +56,7 @@
 
 	<section class="section" id="portfolio">
 		<div class="container">
-			<p class="title has-text-centered mt-5 has-text-white">
+			<p class="title has-text-centered mt-5">
 				<span class="icon-text">
 					<OIcon size="medium" icon="folder-file" />
 					<span>My Portfolio</span>
@@ -69,7 +69,7 @@
 
 	<section class="section" id="contact">
 		<div class="container">
-			<p class="title has-text-centered mt-5 has-text-white">
+			<p class="title has-text-centered mt-5">
 				<span class="icon-text">
 					<OIcon size="medium" icon="mailbox" />
 					<span>Contact Me</span>
