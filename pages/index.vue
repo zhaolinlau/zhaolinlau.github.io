@@ -14,7 +14,9 @@ import VueWriter from "vue-writer";
 					Dev<VueWriter class="is-inline-block" :array="['eloper From Malaysia']" />
 				</p>
 
-				<SocialButtons />
+				<div class="buttons">
+					<SocialButtons />
+				</div>
 			</div>
 		</div>
 	</section>

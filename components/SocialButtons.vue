@@ -35,11 +35,9 @@ const socials = [
 
 <template>
 	<div class="buttons">
-		<OButton tag="NuxtLink" :variant="social.variant" :to="social.to" target="_blank" v-for="social in socials">
-			<span class="icon-text">
-				<Icon :name="social.icon" />
-				<span>{{ social.title }}</span>
-			</span>
-		</OButton>
+		<NuxtLink :class="`button is-${social.variant}`" :to="social.to" target="_blank" v-for="social in socials">
+			<Icon :name="social.icon" />
+			<span>{{ social.title }}</span>
+		</NuxtLink>
 	</div>
 </template>
