@@ -10,8 +10,9 @@ import VueWriter from "vue-writer";
 				<p class="subtitle">Hello! I am</p>
 				<p class="title is-1 is-italic">Zhaolin Lau</p>
 				<p class="subtitle is-3">
-					A Passionate Web
-					Dev<VueWriter class="is-inline-block" :array="['eloper From Malaysia']" />
+					<VueWriter :typeSpeed="50" :eraseSpeed="50" :array="['Developer From Malaysia']">
+						A Passionate Web
+					</VueWriter>
 				</p>
 
 				<div class="buttons">
@@ -92,18 +93,13 @@ import VueWriter from "vue-writer";
 </template>
 
 <style>
+.is-typed span.typed {
+	color: #4a4a4a;
+}
+
 .is-typed span.cursor {
 	display: inline-block;
 	width: 5px;
-	background-color: #4a4a4a;
-	animation: blink 1s infinite;
-}
-
-.is-typed span.underscore {
-	display: inline-flex;
-	width: 10px;
-	height: 1px;
-	align-items: flex-end;
 	background-color: #4a4a4a;
 	animation: blink 1s infinite;
 }
@@ -113,13 +109,15 @@ import VueWriter from "vue-writer";
 }
 
 @keyframes blink {
-
-	0%,
-	100% {
+	49% {
 		background-color: #4a4a4a;
 	}
 
 	50% {
+		background-color: transparent;
+	}
+
+	99% {
 		background-color: transparent;
 	}
 }
