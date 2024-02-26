@@ -6,5 +6,5 @@ export default defineNuxtConfig({
 	},
 	modules: ["@nuxt/image"],
 
-	plugins: ["plugins/oruga.ts"],
+	plugins: ["plugins/oruga.js"],
 });
