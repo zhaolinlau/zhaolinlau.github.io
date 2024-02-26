@@ -1,135 +1,79 @@
 <script setup>
-const isSubmittedModal = ref(false)
+const contactError = ref('')
+const contactSuccess = ref('')
+const contacting = ref(false)
+const _captcha = ref('false')
+const name = ref('')
+const email = ref('')
+const message = ref('')
+const _subject = ref('')
 
-const isLoading = ref(false)
+const contact = async () => {
+	contacting.value = true
+	const formData = new FormData();
+	formData.append('_captcha', _captcha.value);
+	formData.append('name', name.value);
+	formData.append('message', message.value);
+	formData.append('email', email.value);
+	formData.append('_subject', _subject.value);
 
-const isSubmitted = ref(false)
-
-const captcha = ref(false)
-
-const isSending = ref(false)
-
-function openNotification() {
-	isSubmitted.value = true
-	isSubmittedModal.value = true
-}
-
-function openLoading() {
-	isLoading.value = true
-}
-
-function Sending() {
-	isSending.value = true
-}
-
-function resetForm(form) {
-	const captchaValue = form.elements['_captcha'].value
-	form.reset()
-	form.elements['_captcha'].value = captchaValue
-}
-
-function refreshPage() {
-	isSubmittedModal.value = false
-	openLoading()
-	location.reload()
-}
-
-function submitForm(event) {
-	event.preventDefault()
-	openLoading()
-	Sending()
-
-	const form = event.target
-	const formData = new FormData(form)
-
-	fetch('https://formsubmit.co/c771b3ea7ca4ec5d9aa6e7621c42027e', {
-		method: 'POST',
+	await $fetch('https://formsubmit.co/c771b3ea7ca4ec5d9aa6e7621c42027e', {
+		method: 'post',
 		body: formData
 	})
 		.then(response => {
-			console.log(response)
 			if (response.ok) {
-				resetForm(form)
+				contacting.value = false
+				contactSuccess.value = 'Your message has been sent successfully.'
+				contactError.value = ''
 			}
 		})
 		.catch(error => {
-			console.error(error)
+			contactError.value = error
+			contactSuccess.value = ''
 		})
 		.finally(() => {
-			openNotification()
-			isLoading.value = false
-			isSending.value = false
+			setTimeout(() => {
+				contactSuccess.value = ''
+				contactError.value = ''
+			}, 3000);
 		})
 }
 </script>
 
 <template>
-	<o-loading v-model:active="isLoading">
-		<o-icon pack="mdi" icon="loading" size="large"></o-icon>
-	</o-loading>
+	<OLoading v-model:active="isLoading">
+		<OIcon pack="mdi" icon="loading" size="large"></OIcon>
+	</OLoading>
 
-	<o-modal v-model:active="isSubmittedModal" canCancel="[]">
-		<div class="card has-background-dark">
-			<div class="card-content has-text-centered">
-				<o-icon icon="check-circle-outline" variant="success" size="large" />
-				<p class="title has-text-light">
-					Your message has been sent successfully.
-				</p>
-			</div>
-			<div class="card-footer">
-				<o-button class="card-footer-item" icon-left="hand-okay" variant="dark" inverted @click="refreshPage">OK</o-button>
-			</div>
-		</div>
-	</o-modal>
+	<form class="box" @submit.prevent="contact()">
+		<ONotification v-if="contactSuccess" :message="contactSuccess" iconSize="medium" variant="success" closable
+			aria-close-label="Close notification" />
 
-	<form class="box has-background-dark" @submit="submitForm" method="post">
-		<o-notification autoClose v-model:active="isSubmitted" message="Your message has been sent successfully."
-			iconSize="medium" duration="5000" type="success" closable variant="black"
-			aria-close-label="Close notification"></o-notification>
+		<ONotification v-if="contactError" :message="contactError" iconSize="medium" variant="danger" closable
+			aria-close-label="Close notification" />
 
-		<o-field label="Captcha" class="is-hidden">
-			<o-input name="_captcha" v-model="captcha" required></o-input>
-		</o-field>
+		<OInput name="_captcha" type="hidden" v-model="_captcha" required />
 
-		<o-field>
-			<template #label>
-				<span class="has-text-light">
-					Subject
-				</span>
-			</template>
-			<o-input class="has-background-dark has-text-light" icon="format-title" name="_subject" required></o-input>
-		</o-field>
+		<OField label="Subject">
+			<OInput icon="format-title" name="_subject" v-model="_subject" required />
+		</OField>
 
-		<o-field>
-			<template #label>
-				<span class="has-text-light">
-					Name
-				</span>
-			</template>
-			<o-input class="has-background-dark has-text-light" icon="account" name="name" required></o-input>
-		</o-field>
+		<OField label="Name">
+			<OInput icon="account" name="name" v-model="name" required />
+		</OField>
 
-		<o-field>
-			<template #label>
-				<span class="has-text-light">
-					Email
-				</span>
-			</template>
-			<o-input class="has-background-dark has-text-light" icon="email" type="email" name="email" required></o-input>
-		</o-field>
+		<OField label="Email">
+			<OInput icon="email" type="email" name="email" v-model="email" required />
+		</OField>
 
-		<o-field>
-			<template #label>
-				<span class="has-text-light">
-					Message
-				</span>
-			</template>
-			<o-input class="has-background-dark has-text-light" icon="message-text" type="textarea" name="message"
-				required></o-input>
-		</o-field>
+		<OField label="Message">
+			<OInput icon="message-text" type="textarea" v-model="message" name="message" required />
+		</OField>
 
-		<o-field>
-			<o-button nativeType="submit" icon-left="send" variant="black" :loading="isSending" rounded expanded>Send</o-button>
-		</o-field>
+		<OField>
+			<OButton nativeType="submit" icon-left="send" variant="primary" :disabled="contacting" :loading="contacting"
+				label="Send" rounded expanded />
+		</OField>
 	</form>
 </template>

@@ -2,31 +2,31 @@
 const socials = [
 	{
 		variant: 'dark',
-		href: 'https://github.com/zhaolinlau',
+		to: 'https://github.com/zhaolinlau',
 		icon: 'github',
 		title: 'GitHub',
 	},
 	{
 		variant: 'link',
-		href: 'https://www.facebook.com/zhaolinlau/',
+		to: 'https://www.facebook.com/zhaolinlau/',
 		icon: 'facebook',
 		title: 'Facebook',
 	},
 	{
 		variant: 'danger is-light',
-		href: 'https://www.instagram.com/zhaolin_lau/',
+		to: 'https://www.instagram.com/zhaolin_lau/',
 		icon: 'instagram',
 		title: 'Instagram',
 	},
 	{
 		variant: 'info',
-		href: 'https://www.linkedin.com/in/zhaolinlau/',
+		to: 'https://www.linkedin.com/in/zhaolinlau/',
 		icon: 'linkedin',
 		title: 'LinkedIn',
 	},
 	{
 		variant: 'light',
-		href: 'https://twitter.com/zhaolinlau',
+		to: 'https://twitter.com/zhaolinlau',
 		icon: 'x-twitter',
 		title: 'Twitter',
 	},
@@ -35,11 +35,11 @@ const socials = [
 
 <template>
 	<div class="buttons">
-		<o-button tag="a" :variant="social.variant" :href="social.href" target="_blank" v-for="social in socials">
+		<OButton tag="NuxtLink" :variant="social.variant" :to="social.to" target="_blank" v-for="social in socials">
 			<span class="icon-text">
-				<o-icon pack="fab" size="medium" :icon="social.icon"></o-icon>
+				<OIcon pack="fab" size="medium" :icon="social.icon" />
 				<span>{{ social.title }}</span>
 			</span>
-		</o-button>
+		</OButton>
 	</div>
 </template>

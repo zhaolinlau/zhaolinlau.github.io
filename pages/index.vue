@@ -1,6 +1,6 @@
 <template>
 	<BackTop />
-	<section class="hero is-fullheight is-black">
+	<section class="hero is-fullheight">
 		<div class="hero-body">
 			<div class="container">
 				<p class="subtitle">Hello! I am</p>
@@ -18,14 +18,14 @@
 		<div class="container">
 			<p class="title mt-5 has-text-centered has-text-white">
 				<span class="icon-text">
-					<o-icon size="medium" icon="information-variant-circle-outline"></o-icon>
+					<OIcon size="medium" icon="information-variant-circle-outline" />
 					<span>About Me</span>
 				</span>
 			</p>
 			<div class="columns is-multiline is-vcentered">
 				<div class="column is-4">
 					<figure class="image">
-						<nuxt-img class="is-rounded" src="img/me.jpg" alt="LAU ZHAO LIN" />
+						<NuxtImg class="is-rounded" src="img/me.jpg" alt="LAU ZHAO LIN" />
 					</figure>
 				</div>
 				<div class="column is-8">
@@ -45,7 +45,7 @@
 		<div class="container">
 			<p class="title mt-5 has-text-white">
 				<span class="icon-text">
-					<o-icon size="medium" icon="code-tags"></o-icon>
+					<OIcon size="medium" icon="code-tags" />
 					<span>My Skills</span>
 				</span>
 			</p>
@@ -58,7 +58,7 @@
 		<div class="container">
 			<p class="title has-text-centered mt-5 has-text-white">
 				<span class="icon-text">
-					<o-icon size="medium" icon="folder-file"></o-icon>
+					<OIcon size="medium" icon="folder-file" />
 					<span>My Portfolio</span>
 				</span>
 			</p>
@@ -71,7 +71,7 @@
 		<div class="container">
 			<p class="title has-text-centered mt-5 has-text-white">
 				<span class="icon-text">
-					<o-icon size="medium" icon="mailbox"></o-icon>
+					<OIcon size="medium" icon="mailbox" />
 					<span>Contact Me</span>
 				</span>
 			</p>

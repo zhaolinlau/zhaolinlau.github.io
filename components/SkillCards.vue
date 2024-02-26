@@ -54,9 +54,9 @@ const skills = [
 <template>
 	<div class="columns is-multiline">
 		<div class="column is-4" v-for="skill in skills">
-			<div class="box has-background-dark has-text-light">
-				<o-icon :icon="skill.icon" size="large"></o-icon>
-				<p class="title is-4 has-text-light">{{ skill.title }}</p>
+			<div class="box">
+				<OIcon :icon="skill.icon" size="large" />
+				<p class="title is-4">{{ skill.title }}</p>
 			</div>
 		</div>
 	</div>

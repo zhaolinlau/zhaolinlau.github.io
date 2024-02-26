@@ -76,16 +76,16 @@ const portfolios = ref([
 <template>
 	<div class="columns is-multiline is-centered">
 		<div class="column is-4" v-for="portfolio in portfolios">
-			<div class="card has-background-dark">
+			<div class="card">
 				<header class="card-header">
-					<p class="card-header-title has-text-light">
+					<p class="card-header-title">
 						<span>{{ portfolio.title }}</span>
 					</p>
 				</header>
 
 				<div class="card-image">
 					<figure class="image">
-						<nuxt-img :src="`img/${portfolio.src}`" :alt="portfolio.src" />
+						<NuxtImg :src="`img/${portfolio.src}`" placeholder />
 					</figure>
 				</div>
 
@@ -100,23 +100,23 @@ const portfolios = ref([
 				</div>
 
 				<footer class="card-footer">
-					<a :href="portfolio.domain" class="card-footer-item has-text-primary" target="_blank">
+					<NuxtLink :to="portfolio.domain" class="card-footer-item has-text-primary" target="_blank">
 						<span class="icon-text">
-							<o-icon icon="eye"></o-icon>
+							<OIcon icon="eye" />
 							<span>Preview</span>
 						</span>
-					</a>
+					</NuxtLink>
 
-					<a :href="portfolio.repo" class="card-footer-item has-text-info-light" target="_blank" v-if="portfolio.public">
+					<NuxtLink :to="portfolio.repo" class="card-footer-item has-text-info" target="_blank" v-if="portfolio.public">
 						<span class="icon-text">
-							<o-icon icon="github"></o-icon>
+							<OIcon icon="github" />
 							<span>Source Code</span>
 						</span>
-					</a>
+					</NuxtLink>
 
 					<div class="card-footer-item is-unselectable" v-if="!portfolio.public">
-						<span class="icon-text has-text-light">
-							<o-icon icon="lock"></o-icon>
+						<span class="icon-text">
+							<OIcon icon="lock" />
 							<span>Private</span>
 						</span>
 					</div>
