@@ -9,35 +9,35 @@ const message = ref('')
 const _subject = ref('')
 
 const contact = async () => {
-	contacting.value = true
-	const formData = new FormData();
-	formData.append('_captcha', _captcha.value);
-	formData.append('name', name.value);
-	formData.append('message', message.value);
-	formData.append('email', email.value);
-	formData.append('_subject', _subject.value);
+	try {
+		contacting.value = true
+		const formData = new FormData();
+		formData.append('_captcha', _captcha.value);
+		formData.append('name', name.value);
+		formData.append('message', message.value);
+		formData.append('email', email.value);
+		formData.append('_subject', _subject.value);
 
-	await $fetch('https://formsubmit.co/c771b3ea7ca4ec5d9aa6e7621c42027e', {
-		method: 'post',
-		body: formData
-	})
-		.then(response => {
-			if (response.ok) {
-				contacting.value = false
-				contactSuccess.value = 'Your message has been sent successfully.'
-				contactError.value = ''
-			}
+		await $fetch('https://formsubmit.co/c771b3ea7ca4ec5d9aa6e7621c42027e', {
+			method: 'post',
+			body: formData
 		})
-		.catch(error => {
-			contactError.value = error
+			.then(response => {
+				if (response.ok) {
+					contactSuccess.value = 'Your message has been sent successfully.'
+					contactError.value = ''
+				}
+			})
+	} catch (error) {
+		contactError.value = error.message
+		contactSuccess.value = ''
+	} finally {
+		contacting.value = false
+		setTimeout(() => {
 			contactSuccess.value = ''
-		})
-		.finally(() => {
-			setTimeout(() => {
-				contactSuccess.value = ''
-				contactError.value = ''
-			}, 3000);
-		})
+			contactError.value = ''
+		}, 3000);
+	}
 }
 </script>
 
