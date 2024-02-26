@@ -23,6 +23,9 @@ dependencies:
   vue-scrollto:
     specifier: ^2.20.0
     version: 2.20.0
+  vue-writer:
+    specifier: ^1.2.0
+    version: 1.2.0(vue@3.4.20)
 
 devDependencies:
   '@nuxt/devtools':
@@ -6658,6 +6661,15 @@ packages:
     resolution: {integrity: sha512-7i+AGKJTThZnMEkhIPgrZjyAX+fXV7/rGdg+CV283uZZwCxwiMXaBLTmIc5RTA4uwGnT+E6eJle3mXQfM2OD3A==}
     dependencies:
       bezier-easing: 2.1.0
+    dev: false
+
+  /vue-writer@1.2.0(vue@3.4.20):
+    resolution: {integrity: sha512-EtunS6F12cyhXkKgIKDQxr6QEJpSmj4rUSqE149XZN5vbPQuX7PIbWovA1oPvGYUxrlq5HHobdZAzOzSeNAG7g==}
+    engines: {node: '>=12'}
+    peerDependencies:
+      vue: ^3.0.5
+    dependencies:
+      vue: 3.4.20
     dev: false
 
   /vue@3.4.20:

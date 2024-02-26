@@ -1,3 +1,7 @@
+<script setup>
+import VueWriter from "vue-writer";
+</script>
+
 <template>
 	<BackTop />
 	<section class="hero is-fullheight">
@@ -6,7 +10,8 @@
 				<p class="subtitle">Hello! I am</p>
 				<p class="title is-1 is-italic">Zhaolin Lau</p>
 				<p class="subtitle is-3">
-					A Passionate Web Developer From Malaysia
+					A Passionate Web
+					Dev<VueWriter class="is-inline-block" :array="['eloper From Malaysia']" />
 				</p>
 
 				<SocialButtons />
@@ -83,3 +88,37 @@
 		</div>
 	</section>
 </template>
+
+<style>
+.is-typed span.cursor {
+	display: inline-block;
+	width: 5px;
+	background-color: #4a4a4a;
+	animation: blink 1s infinite;
+}
+
+.is-typed span.underscore {
+	display: inline-flex;
+	width: 10px;
+	height: 1px;
+	align-items: flex-end;
+	background-color: #4a4a4a;
+	animation: blink 1s infinite;
+}
+
+.is-typed span.cursor.typing {
+	animation: none;
+}
+
+@keyframes blink {
+
+	0%,
+	100% {
+		background-color: #4a4a4a;
+	}
+
+	50% {
+		background-color: transparent;
+	}
+}
+</style>
