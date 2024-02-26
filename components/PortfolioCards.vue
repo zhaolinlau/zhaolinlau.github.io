@@ -70,19 +70,6 @@ const portfolios = ref([
 			'Nuxt.js'
 		]
 	},
-	{
-		title: 'UTM Foundation & Diploma Consultation',
-		src: 'utmfd.png',
-		domain: 'https://utmfd.vercel.app/',
-		public: true,
-		repo: 'https://github.com/Luetify/UTM-FD',
-		tags: [
-			'Static',
-			'Vue.js',
-			'Vuetify UI',
-			'Nuxt.js'
-		]
-	},
 ])
 </script>
 
