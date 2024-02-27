@@ -1,17 +1,17 @@
 <script setup>
 const portfolios = ref([
 	{
-		title: 'To-do List',
-		src: 'to-do-list.png',
-		domain: 'https://to-do-list-dun-ten-18.vercel.app/',
+		title: 'To-dos',
+		src: 'to-dos.png',
+		domain: 'https://to-dos-self.vercel.app/',
 		public: true,
-		repo: 'https://github.com/zhaolinlau/to-do-list',
+		repo: 'https://github.com/zhaolinlau/to-dos',
 		tags: [
 			'Dynamic',
-			'Bulma CSS',
-			'Vue.js',
-			'Oruga UI',
-			'Nuxt.js',
+			'Bulma',
+			'Vue',
+			'Oruga',
+			'Nuxt',
 			'Supabase'
 		]
 	},
@@ -23,10 +23,10 @@ const portfolios = ref([
 		repo: '',
 		tags: [
 			'Static',
-			'Bulma CSS',
-			'Vue.js',
-			'Oruga UI',
-			'Nuxt.js'
+			'Bulma',
+			'Vue',
+			'Oruga',
+			'Nuxt'
 		]
 	},
 	{
@@ -37,9 +37,9 @@ const portfolios = ref([
 		repo: '',
 		tags: [
 			'Static',
-			'Vue.js',
-			'Vuetify UI',
-			'Nuxt.js'
+			'Vue',
+			'Vuetify',
+			'Nuxt'
 		]
 	},
 	{
@@ -50,10 +50,10 @@ const portfolios = ref([
 		repo: 'https://github.com/zhaolinlau/huawei-intelligent-world-2030',
 		tags: [
 			'Static',
-			'Bulma CSS',
-			'Vue.js',
-			'Oruga UI',
-			'Nuxt.js'
+			'Bulma',
+			'Vue',
+			'Oruga',
+			'Nuxt'
 		]
 	},
 	{
@@ -64,10 +64,10 @@ const portfolios = ref([
 		repo: 'https://github.com/zhaolinlau/zhaolinlau.github.io',
 		tags: [
 			'Static',
-			'Bulma CSS',
-			'Vue.js',
-			'Oruga UI',
-			'Nuxt.js'
+			'Bulma',
+			'Vue',
+			'Oruga',
+			'Nuxt'
 		]
 	},
 ])
