@@ -9,11 +9,11 @@ dependencies:
     specifier: ^7.4.47
     version: 7.4.47
   '@oruga-ui/oruga-next':
-    specifier: ^0.8.5
-    version: 0.8.5(vue@3.4.21)
+    specifier: ^0.7.0
+    version: 0.7.0(vue@3.4.21)
   '@oruga-ui/theme-bulma':
-    specifier: ^0.3.0
-    version: 0.3.0
+    specifier: ^0.2.11
+    version: 0.2.11
   animate.css:
     specifier: ^4.1.1
     version: 4.1.1
@@ -1527,16 +1527,16 @@ packages:
       - supports-color
     dev: true
 
-  /@oruga-ui/oruga-next@0.8.5(vue@3.4.21):
-    resolution: {integrity: sha512-HnODRTrurmke7O5rRNdrbqYuNIdMrnBJ+P3jh6J7/Lk/zgMnpsObSGj/6JfQRvdf5Wq++Ch5yVUys0V4Lm08JQ==}
+  /@oruga-ui/oruga-next@0.7.0(vue@3.4.21):
+    resolution: {integrity: sha512-T2KnNhGzgqv/Xzu4Efx3wnYahANcP6Z7Yc8DHOFIOLrM+ZDdTS9OjL3gofBVDrDBRg1DQv6EvsSsNkwMR88LpA==}
     peerDependencies:
       vue: ^3.0.0
     dependencies:
       vue: 3.4.21
     dev: false
 
-  /@oruga-ui/theme-bulma@0.3.0:
-    resolution: {integrity: sha512-lkTsrdQJ6L5s/SACVtnjo51Tx/jIR+Dz2CgLAbLEooTE0tTiQPiQhkgXqEqLX8a78Kxp7kJa5d7YypGGxiJPjg==}
+  /@oruga-ui/theme-bulma@0.2.11:
+    resolution: {integrity: sha512-yMYNTWDNZQ0qyzAlWVyvEO/ZDRjRIyPDTf58IL+OVJuVCsq1Nn/4nFltemuQA1foL6KpsqXMFT9pBTf4wQHMPw==}
     dependencies:
       bulma: 0.9.4
     dev: false
