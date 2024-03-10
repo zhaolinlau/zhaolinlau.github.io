@@ -10,7 +10,7 @@ const portfolios = ref([
 			'Dynamic',
 			'Bulma',
 			'Vue',
-			'Oruga',
+			'Buefy',
 			'Nuxt',
 			'Supabase'
 		]
