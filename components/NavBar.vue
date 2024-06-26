@@ -29,25 +29,33 @@ const scrollToElement = async (id) => {
 			<div class="navbar-end">
 				<NuxtLink class="navbar-item" @click="scrollToElement('#about')">
 					<span class="icon-text">
-						<OIcon icon="information-variant-circle-outline" />
+						<span class="icon">
+							<Icon name="mdi:information-variant-circle-outline" />
+						</span>
 						<span>About</span>
 					</span>
 				</NuxtLink>
 				<NuxtLink class="navbar-item" @click="scrollToElement('#skills')">
 					<span class="icon-text">
-						<OIcon icon="code-tags" />
+						<span class="icon">
+							<Icon name="mdi:code-tags" />
+						</span>
 						<span>Skills</span>
 					</span>
 				</NuxtLink>
 				<NuxtLink class="navbar-item" @click="scrollToElement('#portfolio')">
 					<span class="icon-text">
-						<OIcon icon="folder-file" />
+						<span class="icon">
+							<Icon name="mdi:folder-file" />
+						</span>
 						<span>Portfolio</span>
 					</span>
 				</NuxtLink>
 				<NuxtLink class="navbar-item" @click="scrollToElement('#contact')">
 					<span class="icon-text">
-						<OIcon icon="mailbox" />
+						<span class="icon">
+							<Icon name="mdi:mailbox" />
+						</span>
 						<span>Contact</span>
 					</span>
 				</NuxtLink>
