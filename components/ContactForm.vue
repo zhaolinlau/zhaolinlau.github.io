@@ -91,7 +91,12 @@ const contact = async () => {
 
 		<div class="field">
 			<div class="control is-expanded">
-				<button class="button is-primary is-rounded is-fullwidth" type="submit">Send</button>
+				<button class="button is-primary is-rounded is-fullwidth" type="submit">
+					<span class="icon">
+						<Icon name="mdi:send" />
+					</span>
+					<span>Send</span>
+				</button>
 			</div>
 		</div>
 	</form>

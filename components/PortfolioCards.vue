@@ -102,21 +102,27 @@ const portfolios = ref([
 				<footer class="card-footer">
 					<NuxtLink :to="portfolio.domain" class="card-footer-item has-text-primary" target="_blank">
 						<span class="icon-text">
-							<OIcon icon="eye" />
+							<span class="icon">
+								<Icon name="mdi:eye" />
+							</span>
 							<span>Preview</span>
 						</span>
 					</NuxtLink>
 
 					<NuxtLink :to="portfolio.repo" class="card-footer-item has-text-info" target="_blank" v-if="portfolio.public">
 						<span class="icon-text">
-							<OIcon icon="github" />
+							<span class="icon">
+								<Icon name="mdi:github" />
+							</span>
 							<span>Source Code</span>
 						</span>
 					</NuxtLink>
 
 					<div class="card-footer-item is-unselectable" v-if="!portfolio.public">
 						<span class="icon-text">
-							<OIcon icon="lock" />
+							<span class="icon">
+								<Icon name="mdi:lock" />
+							</span>
 							<span>Private</span>
 						</span>
 					</div>
