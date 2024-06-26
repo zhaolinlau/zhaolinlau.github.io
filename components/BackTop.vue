@@ -19,8 +19,11 @@ onUnmounted(() => {
 </script>
 
 <template>
-	<OButton variant="link" class="scrolltotop animate__animated animate__fadeIn" v-if="showButton" @click="scrollToTop"
-		icon-left="arrow-up" />
+	<button class="button is-link scrolltotop animate__animated animate__fadeIn" v-if="showButton" @click="scrollToTop">
+		<span class="icon">
+			<Icon name="mdi:arrow-up" />
+		</span>
+	</button>
 </template>
 
 <style>
