@@ -1,16 +1,16 @@
 <script setup>
-const contactError = ref('')
-const contactSuccess = ref('')
-const contacting = ref(false)
-const name = ref('')
-const email = ref('')
-const message = ref('')
-const subject = ref('')
-const mail = useMail()
+const contactError = ref('');
+const contactSuccess = ref('');
+const contacting = ref(false);
+const name = ref('');
+const email = ref('');
+const message = ref('');
+const subject = ref('');
+const mail = useMail();
 
 const contact = async () => {
 	try {
-		contacting.value = true
+		contacting.value = true;
 
 		await mail.send({
 			subject: subject.value,
@@ -19,54 +19,80 @@ const contact = async () => {
 			Email: ${email.value} 
 			Message: ${message.value}
 			`,
-		})
+		});
 
-		email.value = ''
-		name.value = ''
-		message.value = ''
-		subject.value = ''
-		contactSuccess.value = 'Your message has been sent successfully.'
-		contactError.value = ''
+		email.value = '';
+		name.value = '';
+		message.value = '';
+		subject.value = '';
+		contactSuccess.value = 'Your message has been sent successfully.';
+		contactError.value = '';
 	} catch (error) {
-		contactError.value = error.message
-		contactSuccess.value = ''
+		contactError.value = error.message;
+		contactSuccess.value = '';
 	} finally {
-		contacting.value = false
+		contacting.value = false;
 		setTimeout(() => {
-			contactSuccess.value = ''
-			contactError.value = ''
+			contactSuccess.value = '';
+			contactError.value = '';
 		}, 3000);
-	}
-}
+	};
+};
 </script>
 
 <template>
 	<form class="box" @submit.prevent="contact()">
-		<ONotification v-if="contactSuccess" :message="contactSuccess" iconSize="medium" variant="success" closable
-			aria-close-label="Close notification" />
+		<div class="notification is-success" v-if="contactSuccess">
+			<button class="delete" @click="contactSuccess = ''"></button>
+			{{ contactSuccess }}
+		</div>
 
-		<ONotification v-if="contactError" :message="contactError" iconSize="medium" variant="danger" closable
-			aria-close-label="Close notification" />
+		<div class="notification is-danger" v-if="contactError">
+			<button class="delete" @click="contactError = ''"></button>
+			{{ contactError }}
+		</div>
 
-		<OField label="Subject">
-			<OInput icon="format-title" v-model="subject" required />
-		</OField>
+		<div class="field">
+			<label for="subject" class="label">Subject</label>
+			<div class="control has-icons-left">
+				<input type="text" class="input" v-model="subject" id="subject" required>
+				<span class="icon is-left">
+					<span class="mdi mdi-format-title"></span>
+				</span>
+			</div>
+		</div>
 
-		<OField label="Name">
-			<OInput icon="account" v-model="name" required />
-		</OField>
+		<div class="field">
+			<label for="name" class="label">Name</label>
+			<div class="control has-icons-left">
+				<input type="text" class="input" v-model="name" id="name" required>
+				<span class="icon is-left">
+					<span class="mdi mdi-account"></span>
+				</span>
+			</div>
+		</div>
 
-		<OField label="Email">
-			<OInput icon="email" type="email" v-model="email" required />
-		</OField>
+		<div class="field">
+			<label for="email" class="label">Email</label>
+			<div class="control has-icons-left">
+				<input type="email" class="input" v-model="email" id="email" required>
+				<span class="icon is-left">
+					<span class="mdi mdi-email"></span>
+				</span>
+			</div>
+		</div>
 
-		<OField label="Message">
-			<OInput icon="message-text" type="textarea" v-model="message" required />
-		</OField>
+		<div class="field">
+			<label for="message" class="label">Message</label>
+			<div class="control has-icons-left">
+				<textarea class="textarea" v-model="message" id="message" required></textarea>
+			</div>
+		</div>
 
-		<OField>
-			<OButton nativeType="submit" icon-left="send" variant="primary" :disabled="contacting" :loading="contacting"
-				label="Send" rounded expanded />
-		</OField>
+		<div class="field">
+			<div class="control is-expanded">
+				<button class="button is-primary is-rounded is-fullwidth" type="submit">Send</button>
+			</div>
+		</div>
 	</form>
 </template>
