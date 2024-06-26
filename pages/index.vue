@@ -1,5 +1,5 @@
 <script setup>
-import VueWriter from "vue-writer";
+import { VueWriter } from 'vue-writer';
 const date = new Date();
 const expYear = date.getFullYear() - 2021;
 </script>
