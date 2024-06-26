@@ -40,7 +40,8 @@ import VueWriter from "vue-writer";
 					<p class="subtitle has-text-centered">Jack of all trades, master of "some"</p>
 					<p class="has-text-justified">
 						Web developer with more than <b>2 years</b> of well-rounded experience with a diploma in the field of
-						<b>Computer Science</b>, extensive knowledge of modern Web techniques and love for <b>Milo</b>. Looking for an
+						<b>Computer Science</b>, extensive knowledge of modern Web techniques and love for <b>Milo</b>. Looking for
+						an
 						opportunity to work and upgrade, as well as being involved in an organization that believes in gaining a
 						competitive edge and giving back to the community.
 					</p>
@@ -93,14 +94,9 @@ import VueWriter from "vue-writer";
 </template>
 
 <style>
-.is-typed span.typed {
-	color: #4a4a4a;
-}
-
 .is-typed span.cursor {
 	display: inline-block;
 	width: 5px;
-	background-color: #4a4a4a;
 	animation: blink 1s infinite;
 }
 
@@ -108,17 +104,35 @@ import VueWriter from "vue-writer";
 	animation: none;
 }
 
-@keyframes blink {
-	49% {
-		background-color: #4a4a4a;
-	}
+@media (prefers-color-scheme: dark) {
+	@keyframes blink {
+		49% {
+			background-color: #f5f5f5;
+		}
 
-	50% {
-		background-color: transparent;
-	}
+		50% {
+			background-color: transparent;
+		}
 
-	99% {
-		background-color: transparent;
+		99% {
+			background-color: transparent;
+		}
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	@keyframes blink {
+		49% {
+			background-color: #4a4a4a;
+		}
+
+		50% {
+			background-color: transparent;
+		}
+
+		99% {
+			background-color: transparent;
+		}
 	}
 }
 </style>
