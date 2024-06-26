@@ -2,8 +2,8 @@
 import { ref } from 'vue';
 const showNav = ref(false);
 import VueScrollTo from 'vue-scrollto';
-const scrollToElement = (id) => {
-	VueScrollTo.scrollTo(id, {
+const scrollToElement = async (id) => {
+	await VueScrollTo.scrollTo(id, {
 		duration: 500,
 	});
 };
@@ -21,41 +21,64 @@ const scrollToElement = (id) => {
 				<span aria-hidden="true"></span>
 				<span aria-hidden="true"></span>
 				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
 			</NuxtLink>
 		</div>
 
 		<div class="navbar-menu" :class="{ 'is-active': showNav }">
 			<div class="navbar-end">
-				<NuxtLink class="navbar-item is-tab" @click="scrollToElement('#about')">
+				<NuxtLink class="navbar-item" @click="scrollToElement('#about')">
 					<span class="icon-text">
-						<OIcon icon="information-variant-circle-outline" />
+						<span class="icon">
+							<Icon name="mdi:information-variant-circle-outline" />
+						</span>
 						<span>About</span>
 					</span>
 				</NuxtLink>
-				<NuxtLink class="navbar-item is-tab" @click="scrollToElement('#skills')">
+				<NuxtLink class="navbar-item" @click="scrollToElement('#skills')">
 					<span class="icon-text">
-						<OIcon icon="code-tags" />
+						<span class="icon">
+							<Icon name="mdi:code-tags" />
+						</span>
 						<span>Skills</span>
 					</span>
 				</NuxtLink>
-				<NuxtLink class="navbar-item is-tab" @click="scrollToElement('#portfolio')">
+				<NuxtLink class="navbar-item" @click="scrollToElement('#portfolio')">
 					<span class="icon-text">
-						<OIcon icon="folder-file" />
+						<span class="icon">
+							<Icon name="mdi:folder-file" />
+						</span>
 						<span>Portfolio</span>
 					</span>
 				</NuxtLink>
-				<NuxtLink class="navbar-item is-tab" @click="scrollToElement('#contact')">
+				<NuxtLink class="navbar-item" @click="scrollToElement('#contact')">
 					<span class="icon-text">
-						<OIcon icon="mailbox" />
+						<span class="icon">
+							<Icon name="mdi:mailbox" />
+						</span>
 						<span>Contact</span>
 					</span>
 				</NuxtLink>
-				<NuxtLink class="navbar-item" to='https://ko-fi.com/V7V6EWJRF' target='_blank'>
-					<NuxtImg src='img/kofi1.webp' placeholder />
-				</NuxtLink>
-				<NuxtLink class="navbar-item" to="https://www.buymeacoffee.com/zhaolinlau" target="_blank">
-					<NuxtImg src="img/default-yellow.png" placeholder />
-				</NuxtLink>
+				<div class="navbar-item">
+					<div class="buttons">
+						<NuxtLink class="button is-info" to='https://ko-fi.com/V7V6EWJRF' target='_blank'>
+							<span class="icon">
+								<Icon name="simple-icons:kofi" />
+							</span>
+							<span>
+								Buy Me a Coffee
+							</span>
+						</NuxtLink>
+						<NuxtLink class="button is-warning" to="https://www.buymeacoffee.com/zhaolinlau" target="_blank">
+							<span class="icon">
+								<Icon name="simple-icons:buymeacoffee" />
+							</span>
+							<span>
+								Buy me a coffee
+							</span>
+						</NuxtLink>
+					</div>
+				</div>
 			</div>
 		</div>
 	</nav>

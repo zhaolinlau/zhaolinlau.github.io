@@ -29,5 +29,9 @@ export default defineNuxtConfig({
 		},
 		display: "swap",
 	},
-	plugins: ["plugins/oruga.js"],
+	css: [
+		'animate.css',
+		'@mdi/font/css/materialdesignicons.css',
+		'bulma/css/bulma.css'
+	]
 });
