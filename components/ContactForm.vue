@@ -84,7 +84,7 @@ const contact = async () => {
 
 		<div class="field">
 			<label for="message" class="label">Message</label>
-			<div class="control has-icons-left">
+			<div class="control">
 				<textarea class="textarea" v-model="message" id="message" required></textarea>
 			</div>
 		</div>
