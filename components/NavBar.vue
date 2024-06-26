@@ -2,8 +2,8 @@
 import { ref } from 'vue';
 const showNav = ref(false);
 import VueScrollTo from 'vue-scrollto';
-const scrollToElement = (id) => {
-	VueScrollTo.scrollTo(id, {
+const scrollToElement = async (id) => {
+	await VueScrollTo.scrollTo(id, {
 		duration: 500,
 	});
 };

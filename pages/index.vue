@@ -1,5 +1,7 @@
 <script setup>
 import VueWriter from "vue-writer";
+const date = new Date();
+const expYear = date.getFullYear() - 2021;
 </script>
 
 <template>
@@ -39,8 +41,10 @@ import VueWriter from "vue-writer";
 				<div class="column is-8">
 					<p class="subtitle has-text-centered">Jack of all trades, master of "some"</p>
 					<p class="has-text-justified">
-						Web developer with more than <b>2 years</b> of well-rounded experience with a diploma in the field of
-						<b>Computer Science</b>, extensive knowledge of modern Web techniques and love for <b>Milo</b>. Looking for
+						Web developer with more than <b>{{ expYear }} years</b> of well-rounded experience with a
+						diploma in the field of
+						<b>Computer Science</b>, extensive knowledge of modern Web techniques and love for <b>Lemon Tea</b>. Looking
+						for
 						an
 						opportunity to work and upgrade, as well as being involved in an organization that believes in gaining a
 						competitive edge and giving back to the community.
