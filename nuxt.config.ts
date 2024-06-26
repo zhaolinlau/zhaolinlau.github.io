@@ -5,6 +5,7 @@ export default defineNuxtConfig({
 		"nuxt-icon",
 		"@nuxt/image",
 		"@nuxtjs/google-fonts",
+		"@vee-validate/nuxt",
 		[
 			"nuxt-mail",
 			{

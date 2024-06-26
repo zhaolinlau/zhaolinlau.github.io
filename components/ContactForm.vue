@@ -1,30 +1,44 @@
 <script setup>
+import { toTypedSchema } from '@vee-validate/zod';
+import * as zod from 'zod';
+
 const contactError = ref('');
 const contactSuccess = ref('');
 const contacting = ref(false);
-const name = ref('');
-const email = ref('');
-const message = ref('');
-const subject = ref('');
 const mail = useMail();
 
-const contact = async () => {
+const validationSchema = toTypedSchema(
+	zod.object({
+		subject: zod.string().min(1),
+		name: zod.string().min(1),
+		email: zod.string().min(1).email(),
+		message: zod.string().min(1)
+	})
+);
+
+const { handleSubmit, errors, defineField, } = useForm({
+	validationSchema
+});
+
+const [email, emailAttrs] = defineField('email');
+const [name, nameAttrs] = defineField('name');
+const [subject, subjectAttrs] = defineField('subject');
+const [message, messageAttrs] = defineField('message');
+
+const contact = handleSubmit(async (values, actions) => {
 	try {
 		contacting.value = true;
 
 		await mail.send({
-			subject: subject.value,
+			subject: values.subject,
 			text: `
-			Name: ${name.value} 
-			Email: ${email.value} 
-			Message: ${message.value}
+			Name: ${values.name} 
+			Email: ${values.email} 
+			Message: ${values.message}
 			`,
 		});
 
-		email.value = '';
-		name.value = '';
-		message.value = '';
-		subject.value = '';
+		actions.resetForm();
 		contactSuccess.value = 'Your message has been sent successfully.';
 		contactError.value = '';
 	} catch (error) {
@@ -37,7 +51,7 @@ const contact = async () => {
 			contactError.value = '';
 		}, 3000);
 	};
-};
+});
 </script>
 
 <template>
@@ -55,43 +69,59 @@ const contact = async () => {
 		<div class="field">
 			<label for="subject" class="label">Subject</label>
 			<div class="control has-icons-left">
-				<input type="text" class="input" v-model="subject" id="subject" required>
+				<input type="text" class="input" :class="errors.subject ? 'is-danger' : ''" v-model="subject" :subjectAttrs
+					id="subject" :disabled="contacting">
 				<span class="icon is-left">
 					<span class="mdi mdi-format-title"></span>
 				</span>
 			</div>
+			<p class="help is-danger" v-if="errors.subject">
+				{{ errors.subject }}
+			</p>
 		</div>
 
 		<div class="field">
 			<label for="name" class="label">Name</label>
 			<div class="control has-icons-left">
-				<input type="text" class="input" v-model="name" id="name" required>
+				<input type="text" class="input" :class="errors.name ? 'is-danger' : ''" v-model="name" :nameAttrs id="name"
+					:disabled="contacting">
 				<span class="icon is-left">
 					<span class="mdi mdi-account"></span>
 				</span>
 			</div>
+			<p class="help is-danger" v-if="errors.name">
+				{{ errors.name }}
+			</p>
 		</div>
 
 		<div class="field">
 			<label for="email" class="label">Email</label>
 			<div class="control has-icons-left">
-				<input type="email" class="input" v-model="email" id="email" required>
+				<input type="email" class="input" :class="errors.email ? 'is-danger' : ''" v-model="email" :emailAttrs
+					id="email" :disabled="contacting">
 				<span class="icon is-left">
 					<span class="mdi mdi-email"></span>
 				</span>
 			</div>
+			<p class="help is-danger" v-if="errors.email">
+				{{ errors.email }}
+			</p>
 		</div>
 
 		<div class="field">
 			<label for="message" class="label">Message</label>
 			<div class="control">
-				<textarea class="textarea" v-model="message" id="message" required></textarea>
+				<textarea class="textarea" :class="errors.message ? 'is-danger' : ''" v-model="message" :messageAttrs
+					id="message" :disabled="contacting"></textarea>
 			</div>
+			<p class="help is-danger" v-if="errors.message">
+				{{ errors.message }}
+			</p>
 		</div>
 
 		<div class="field">
 			<div class="control is-expanded">
-				<button class="button is-primary is-rounded is-fullwidth" type="submit">
+				<button class="button is-primary is-rounded is-fullwidth" :class="contacting ? 'is-loading' : ''" type="submit">
 					<span class="icon">
 						<Icon name="mdi:send" />
 					</span>
