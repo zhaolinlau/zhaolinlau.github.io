@@ -28,7 +28,9 @@ const expYear = date.getFullYear() - 2021;
 		<div class="container">
 			<p class="title mt-5 has-text-centered">
 				<span class="icon-text">
-					<OIcon size="medium" icon="information-variant-circle-outline" />
+					<span class="icon">
+						<span class="mdi mdi-information-variant-circle-outline"></span>
+					</span>
 					<span>About Me</span>
 				</span>
 			</p>
@@ -58,7 +60,9 @@ const expYear = date.getFullYear() - 2021;
 		<div class="container">
 			<p class="title mt-5">
 				<span class="icon-text">
-					<OIcon size="medium" icon="code-tags" />
+					<span class="icon">
+						<span class="mdi mdi-code-tags"></span>
+					</span>
 					<span>My Skills</span>
 				</span>
 			</p>
@@ -71,7 +75,9 @@ const expYear = date.getFullYear() - 2021;
 		<div class="container">
 			<p class="title has-text-centered mt-5">
 				<span class="icon-text">
-					<OIcon size="medium" icon="folder-file" />
+					<span class="icon">
+						<span class="mdi mdi-folder-file"></span>
+					</span>
 					<span>My Portfolio</span>
 				</span>
 			</p>
@@ -84,7 +90,9 @@ const expYear = date.getFullYear() - 2021;
 		<div class="container">
 			<p class="title has-text-centered mt-5">
 				<span class="icon-text">
-					<OIcon size="medium" icon="mailbox" />
+					<span class="icon">
+						<span class="mdi mdi-mailbox"></span>
+					</span>
 					<span>Contact Me</span>
 				</span>
 			</p>
