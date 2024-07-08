@@ -66,7 +66,6 @@ const portfolios = ref([
 			'Static',
 			'Bulma',
 			'Vue',
-			'Oruga',
 			'Nuxt'
 		]
 	},
