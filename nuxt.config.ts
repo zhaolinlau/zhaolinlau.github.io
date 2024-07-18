@@ -1,8 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-	devtools: { enabled: false },
+	devtools: { enabled: true },
+
 	modules: [
-		"nuxt-icon",
+		"@nuxt/icon",
 		"@nuxt/image",
 		"@nuxtjs/google-fonts",
 		"@vee-validate/nuxt",
@@ -22,6 +23,7 @@ export default defineNuxtConfig({
 			},
 		],
 	],
+
 	googleFonts: {
 		families: {
 			Merienda: {
@@ -30,9 +32,12 @@ export default defineNuxtConfig({
 		},
 		display: "swap",
 	},
+
 	css: [
 		'animate.css',
 		'@mdi/font/css/materialdesignicons.css',
 		'bulma/css/bulma.css'
-	]
+	],
+
+	compatibilityDate: "2024-07-18"
 });
