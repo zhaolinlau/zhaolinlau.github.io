@@ -118,15 +118,13 @@ const expYear = date.getFullYear() - 2021;
 
 @media (prefers-color-scheme: dark) {
 	@keyframes blink {
-		49% {
+		0%,
+
+		100% {
 			background-color: #f5f5f5;
 		}
 
 		50% {
-			background-color: transparent;
-		}
-
-		99% {
 			background-color: transparent;
 		}
 	}
@@ -134,15 +132,13 @@ const expYear = date.getFullYear() - 2021;
 
 @media (prefers-color-scheme: light) {
 	@keyframes blink {
-		49% {
+		0%,
+
+		100% {
 			background-color: #4a4a4a;
 		}
 
 		50% {
-			background-color: transparent;
-		}
-
-		99% {
 			background-color: transparent;
 		}
 	}
