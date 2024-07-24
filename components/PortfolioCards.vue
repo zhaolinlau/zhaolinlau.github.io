@@ -7,24 +7,20 @@ const portfolios = ref([
 		public: true,
 		repo: 'https://github.com/zhaolinlau/to-dos',
 		tags: [
-			'Dynamic',
 			'Bulma',
-			'Vue',
 			'Buefy',
 			'Nuxt',
 			'Supabase'
 		]
 	},
 	{
-		title: 'UMPSA x Huawei Mobile App Competition',
+		title: 'UMPSA x Huawei AppGallery Mobile App Competition',
 		src: 'uxhmac.png',
 		domain: 'https://uxhmac.vercel.app/',
 		public: false,
 		repo: '',
 		tags: [
-			'Static',
 			'Bulma',
-			'Vue',
 			'PrimeVue',
 			'Nuxt'
 		]
@@ -36,8 +32,6 @@ const portfolios = ref([
 		public: false,
 		repo: '',
 		tags: [
-			'Static',
-			'Vue',
 			'Vuetify',
 			'Nuxt'
 		]
@@ -49,9 +43,7 @@ const portfolios = ref([
 		public: true,
 		repo: 'https://github.com/zhaolinlau/huawei-intelligent-world-2030',
 		tags: [
-			'Static',
 			'Bulma',
-			'Vue',
 			'Oruga',
 			'Nuxt'
 		]
@@ -63,9 +55,7 @@ const portfolios = ref([
 		public: true,
 		repo: 'https://github.com/zhaolinlau/zhaolinlau.github.io',
 		tags: [
-			'Static',
 			'Bulma',
-			'Vue',
 			'Nuxt'
 		]
 	},
@@ -73,59 +63,62 @@ const portfolios = ref([
 </script>
 
 <template>
-	<div class="columns is-multiline is-centered">
-		<div class="column is-4" v-for="portfolio in portfolios">
-			<div class="card">
-				<header class="card-header">
-					<p class="card-header-title">
-						<span>{{ portfolio.title }}</span>
-					</p>
-				</header>
+	<div class="fixed-grid has-1-cols-mobile">
+		<div class="grid">
+			<div class="cell" v-for="portfolio in portfolios">
+				<div class="card">
+					<header class="card-header">
+						<p class="card-header-title">
+							<span>{{ portfolio.title }}</span>
+						</p>
+					</header>
 
-				<div class="card-image">
-					<figure class="image">
-						<NuxtImg :src="`img/${portfolio.src}`" placeholder />
-					</figure>
-				</div>
+					<div class="card-image">
+						<figure class="image">
+							<NuxtImg :src="`img/${portfolio.src}`" placeholder />
+						</figure>
+					</div>
 
-				<div class="card-content">
-					<div class="media">
-						<div class="media-content">
-							<span class="tag m-1 is-info" v-for="tag in portfolio.tags">
-								{{ tag }}
-							</span>
+					<div class="card-content">
+						<div class="media">
+							<div class="media-content">
+								<span class="tag m-1 is-info" v-for="tag in portfolio.tags">
+									{{ tag }}
+								</span>
+							</div>
 						</div>
 					</div>
+
+					<footer class="card-footer">
+						<NuxtLink :to="portfolio.domain" class="card-footer-item has-text-primary" target="_blank">
+							<span class="icon-text">
+								<span class="icon">
+									<Icon name="mdi:eye" />
+								</span>
+								<span>Preview</span>
+							</span>
+						</NuxtLink>
+
+						<NuxtLink :to="portfolio.repo" class="card-footer-item has-text-info" target="_blank"
+							v-if="portfolio.public">
+							<span class="icon-text">
+								<span class="icon">
+									<Icon name="mdi:github" />
+								</span>
+								<span>Source Code</span>
+							</span>
+						</NuxtLink>
+
+						<div class="card-footer-item is-unselectable" v-if="!portfolio.public">
+							<span class="icon-text">
+								<span class="icon">
+									<Icon name="mdi:lock" />
+								</span>
+								<span>Private</span>
+							</span>
+						</div>
+					</footer>
 				</div>
-
-				<footer class="card-footer">
-					<NuxtLink :to="portfolio.domain" class="card-footer-item has-text-primary" target="_blank">
-						<span class="icon-text">
-							<span class="icon">
-								<Icon name="mdi:eye" />
-							</span>
-							<span>Preview</span>
-						</span>
-					</NuxtLink>
-
-					<NuxtLink :to="portfolio.repo" class="card-footer-item has-text-info" target="_blank" v-if="portfolio.public">
-						<span class="icon-text">
-							<span class="icon">
-								<Icon name="mdi:github" />
-							</span>
-							<span>Source Code</span>
-						</span>
-					</NuxtLink>
-
-					<div class="card-footer-item is-unselectable" v-if="!portfolio.public">
-						<span class="icon-text">
-							<span class="icon">
-								<Icon name="mdi:lock" />
-							</span>
-							<span>Private</span>
-						</span>
-					</div>
-				</footer>
 			</div>
 		</div>
 	</div>
