@@ -1,3 +1,9 @@
+<template>
+	<NuxtLayout>
+		<NuxtPage />
+	</NuxtLayout>
+</template>
+
 <script setup>
 const date = new Date();
 const expYear = date.getFullYear() - 2021;
@@ -21,12 +27,6 @@ useSeoMeta({
 	twitterCard: 'Zhaolin Lau',
 })
 </script>
-
-<template>
-	<NuxtLayout>
-		<NuxtPage />
-	</NuxtLayout>
-</template>
 
 <style>
 * {

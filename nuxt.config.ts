@@ -34,9 +34,8 @@ export default defineNuxtConfig({
 	},
 
 	css: [
-		'animate.css',
-		'@mdi/font/css/materialdesignicons.css',
-		'bulma/css/bulma.css'
+		'animate.css/animate.min.css',
+		'bulma/css/bulma.min.css'
 	],
 
 	compatibilityDate: "2024-07-18"
