@@ -1,9 +1,3 @@
-<script setup>
-import { VueWriter } from 'vue-writer';
-const date = new Date();
-const expYear = date.getFullYear() - 2021;
-</script>
-
 <template>
 	<BackTop />
 	<section class="hero is-fullheight">
@@ -104,6 +98,12 @@ const expYear = date.getFullYear() - 2021;
 		</div>
 	</section>
 </template>
+
+<script setup>
+import { VueWriter } from 'vue-writer';
+const date = new Date();
+const expYear = date.getFullYear() - 2021;
+</script>
 
 <style>
 .is-typed span.cursor {
