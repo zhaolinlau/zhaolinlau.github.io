@@ -7,24 +7,20 @@ const portfolios = ref([
 		public: true,
 		repo: 'https://github.com/zhaolinlau/to-dos',
 		tags: [
-			'Dynamic',
 			'Bulma',
-			'Vue',
 			'Buefy',
 			'Nuxt',
 			'Supabase'
 		]
 	},
 	{
-		title: 'UMPSA x Huawei Mobile App Competition',
+		title: 'UMPSA x Huawei AppGallery Mobile App Competition',
 		src: 'uxhmac.png',
 		domain: 'https://uxhmac.vercel.app/',
 		public: false,
 		repo: '',
 		tags: [
-			'Static',
 			'Bulma',
-			'Vue',
 			'PrimeVue',
 			'Nuxt'
 		]
@@ -36,8 +32,6 @@ const portfolios = ref([
 		public: false,
 		repo: '',
 		tags: [
-			'Static',
-			'Vue',
 			'Vuetify',
 			'Nuxt'
 		]
@@ -49,9 +43,7 @@ const portfolios = ref([
 		public: true,
 		repo: 'https://github.com/zhaolinlau/huawei-intelligent-world-2030',
 		tags: [
-			'Static',
 			'Bulma',
-			'Vue',
 			'Oruga',
 			'Nuxt'
 		]
@@ -63,9 +55,7 @@ const portfolios = ref([
 		public: true,
 		repo: 'https://github.com/zhaolinlau/zhaolinlau.github.io',
 		tags: [
-			'Static',
 			'Bulma',
-			'Vue',
 			'Nuxt'
 		]
 	},
