@@ -1,3 +1,9 @@
+<script setup>
+import { VueWriter } from 'vue-writer';
+const date = new Date();
+const expYear = date.getFullYear() - 2021;
+</script>
+
 <template>
 	<BackTop />
 	<section class="hero is-fullheight">
@@ -65,18 +71,18 @@
 		</div>
 	</section>
 
-	<section class="section" id="portfolio">
+	<section class="section" id="projects">
 		<div class="container">
 			<p class="title has-text-centered mt-5">
 				<span class="icon-text">
 					<span class="icon">
 						<span class="mdi mdi-folder-file"></span>
 					</span>
-					<span>My Portfolio</span>
+					<span>My Projects</span>
 				</span>
 			</p>
 
-			<PortfolioCards />
+			<ProjectCards />
 		</div>
 	</section>
 
@@ -98,12 +104,6 @@
 		</div>
 	</section>
 </template>
-
-<script setup>
-import { VueWriter } from 'vue-writer';
-const date = new Date();
-const expYear = date.getFullYear() - 2021;
-</script>
 
 <style>
 .is-typed span.cursor {

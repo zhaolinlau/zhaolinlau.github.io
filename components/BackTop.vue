@@ -1,11 +1,3 @@
-<template>
-	<button class="button is-link scrolltotop animate__animated animate__fadeIn" v-if="showButton" @click="scrollToTop">
-		<span class="icon">
-			<Icon name="mdi:arrow-up" size="1.2em" />
-		</span>
-	</button>
-</template>
-
 <script setup>
 const showButton = ref(false);
 
@@ -25,6 +17,14 @@ onUnmounted(() => {
 	window.removeEventListener('scroll', handleScroll);
 });
 </script>
+
+<template>
+	<button class="button is-link scrolltotop animate__animated animate__fadeIn" v-if="showButton" @click="scrollToTop">
+		<span class="icon">
+			<Icon name="mdi:arrow-up" size="1.2em" />
+		</span>
+	</button>
+</template>
 
 <style>
 .scrolltotop {
