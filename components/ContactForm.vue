@@ -1,3 +1,59 @@
+<script setup>
+import { toTypedSchema } from '@vee-validate/zod';
+import * as zod from 'zod';
+
+const contactError = ref('');
+const contactSuccess = ref('');
+const contacting = ref(false);
+const mail = useMail();
+
+const validationSchema = toTypedSchema(
+	zod.object({
+		subject: zod.string().min(1),
+		name: zod.string().min(1),
+		email: zod.string().min(1).email(),
+		message: zod.string().min(1)
+	})
+);
+
+const { handleSubmit, errors, defineField, } = useForm({
+	validationSchema
+});
+
+const [email, emailAttrs] = defineField('email');
+const [name, nameAttrs] = defineField('name');
+const [subject, subjectAttrs] = defineField('subject');
+const [message, messageAttrs] = defineField('message');
+
+const contact = handleSubmit(async (values, actions) => {
+	try {
+		contacting.value = true;
+
+		await mail.send({
+			subject: values.subject,
+			text: `
+			Name: ${values.name} 
+			Email: ${values.email} 
+			Message: ${values.message}
+			`,
+		});
+
+		actions.resetForm();
+		contactSuccess.value = 'Your message has been sent successfully.';
+		contactError.value = '';
+	} catch (error) {
+		contactError.value = error.message;
+		contactSuccess.value = '';
+	} finally {
+		contacting.value = false;
+		setTimeout(() => {
+			contactSuccess.value = '';
+			contactError.value = '';
+		}, 3000);
+	};
+});
+</script>
+
 <template>
 	<form class="box" @submit.prevent="contact()">
 		<div class="notification is-success" v-if="contactSuccess">
@@ -75,59 +131,3 @@
 		</div>
 	</form>
 </template>
-
-<script setup>
-import { toTypedSchema } from '@vee-validate/zod';
-import * as zod from 'zod';
-
-const contactError = ref('');
-const contactSuccess = ref('');
-const contacting = ref(false);
-const mail = useMail();
-
-const validationSchema = toTypedSchema(
-	zod.object({
-		subject: zod.string().min(1),
-		name: zod.string().min(1),
-		email: zod.string().min(1).email(),
-		message: zod.string().min(1)
-	})
-);
-
-const { handleSubmit, errors, defineField, } = useForm({
-	validationSchema
-});
-
-const [email, emailAttrs] = defineField('email');
-const [name, nameAttrs] = defineField('name');
-const [subject, subjectAttrs] = defineField('subject');
-const [message, messageAttrs] = defineField('message');
-
-const contact = handleSubmit(async (values, actions) => {
-	try {
-		contacting.value = true;
-
-		await mail.send({
-			subject: values.subject,
-			text: `
-			Name: ${values.name} 
-			Email: ${values.email} 
-			Message: ${values.message}
-			`,
-		});
-
-		actions.resetForm();
-		contactSuccess.value = 'Your message has been sent successfully.';
-		contactError.value = '';
-	} catch (error) {
-		contactError.value = error.message;
-		contactSuccess.value = '';
-	} finally {
-		contacting.value = false;
-		setTimeout(() => {
-			contactSuccess.value = '';
-			contactError.value = '';
-		}, 3000);
-	};
-});
-</script>

@@ -1,3 +1,19 @@
+<script setup>
+import VueScrollTo from 'vue-scrollto';
+
+const showNav = ref(false);
+
+const scrollToElement = async (id) => {
+	await VueScrollTo.scrollTo(id, {
+		duration: 500,
+	});
+};
+
+const { data: items } = await useFetch('/api/navbar', {
+	method: 'get'
+})
+</script>
+
 <template>
 	<nav class="navbar is-fixed-top has-shadow" role="navigation" aria-label="main navigation" id="nav">
 		<div class="navbar-brand">
@@ -45,50 +61,3 @@
 		</div>
 	</nav>
 </template>
-
-<script setup>
-import VueScrollTo from 'vue-scrollto';
-
-const showNav = ref(false);
-
-const scrollToElement = async (id) => {
-	await VueScrollTo.scrollTo(id, {
-		duration: 500,
-	});
-};
-
-const items = ref([
-	{
-		name: 'About',
-		icon: 'mdi:information-variant-circle-outline',
-		scrollTo: 'about'
-	},
-	{
-		name: 'Skills',
-		icon: 'mdi:code-tags',
-		scrollTo: 'skills'
-	},
-	{
-		name: 'Portfolio',
-		icon: 'mdi:folder-file',
-		scrollTo: 'portfolio'
-	},
-	{
-		name: 'Contact',
-		icon: 'mdi:mailbox',
-		scrollTo: 'contact'
-	},
-	{
-		name: 'Buy Me a Coffee',
-		icon: 'simple-icons:kofi',
-		color: 'is-info',
-		to: 'https://ko-fi.com/V7V6EWJRF'
-	},
-	{
-		name: 'Buy me a coffee',
-		icon: 'simple-icons:buymeacoffee',
-		color: 'is-warning',
-		to: 'https://www.buymeacoffee.com/zhaolinlau'
-	}
-]);
-</script>
