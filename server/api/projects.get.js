@@ -44,7 +44,6 @@ export default defineEventHandler(async (event) => {
 			repo: 'https://github.com/zhaolinlau/huawei-intelligent-world-2030',
 			tags: [
 				'Bulma',
-				'Oruga',
 				'Nuxt'
 			]
 		},
