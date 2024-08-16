@@ -7,7 +7,7 @@ const { data: socials } = await useFetch('/api/socials', {
 <template>
 	<div class="buttons">
 		<NuxtLink :class="`button is-${social.variant}`" :to="social.to" target="_blank" v-for="social in socials">
-			<Icon :name="social.icon" size="1.2em" />
+			<Icon :name="social.icon" />
 			<span>{{ social.title }}</span>
 		</NuxtLink>
 	</div>

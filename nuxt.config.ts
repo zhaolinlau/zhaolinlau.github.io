@@ -38,5 +38,9 @@ export default defineNuxtConfig({
 		'bulma/css/bulma.min.css'
 	],
 
+	icon: {
+		size: '1.2em'
+	},
+
 	compatibilityDate: "2024-07-18"
 });

@@ -72,7 +72,7 @@ const contact = handleSubmit(async (values, actions) => {
 				<input type="text" class="input" :class="errors.subject ? 'is-danger' : ''" v-model="subject" :subjectAttrs
 					id="subject" :disabled="contacting">
 				<span class="icon is-left">
-					<span class="mdi mdi-format-title"></span>
+					<Icon name="mdi:format-title" />
 				</span>
 			</div>
 			<p class="help is-danger" v-if="errors.subject">
@@ -86,7 +86,7 @@ const contact = handleSubmit(async (values, actions) => {
 				<input type="text" class="input" :class="errors.name ? 'is-danger' : ''" v-model="name" :nameAttrs id="name"
 					:disabled="contacting">
 				<span class="icon is-left">
-					<span class="mdi mdi-account"></span>
+					<Icon name="mdi:account" />
 				</span>
 			</div>
 			<p class="help is-danger" v-if="errors.name">
@@ -100,7 +100,7 @@ const contact = handleSubmit(async (values, actions) => {
 				<input type="email" class="input" :class="errors.email ? 'is-danger' : ''" v-model="email" :emailAttrs
 					id="email" :disabled="contacting">
 				<span class="icon is-left">
-					<span class="mdi mdi-email"></span>
+					<Icon name="mdi:email" />
 				</span>
 			</div>
 			<p class="help is-danger" v-if="errors.email">
