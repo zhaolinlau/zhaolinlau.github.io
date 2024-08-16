@@ -36,7 +36,7 @@ const { data: items } = await useFetch('/api/navbar', {
 					<NuxtLink class="navbar-item" @click="scrollToElement(`#${item.scrollTo}`)" v-if="item.scrollTo">
 						<span class="icon-text">
 							<span class="icon">
-								<Icon :name="item.icon" size="1.2em" />
+								<Icon :name="item.icon" />
 							</span>
 							<span>{{ item.name }}</span>
 						</span>
