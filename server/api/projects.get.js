@@ -1,6 +1,18 @@
 export default defineEventHandler(async (event) => {
 	return [
 		{
+			title: 'UMPSA Connect',
+			src: 'umpsa-connect.png',
+			domain: 'https://umpsa-connect.vercel.app/',
+			public: true,
+			repo: 'https://github.com/zhaolinlau/UMPSA-Connect',
+			tags: [
+				'Nuxt',
+				'Vuetify',
+				'Supabase'
+			]
+		},
+		{
 			title: 'To-dos',
 			src: 'to-dos.png',
 			domain: 'https://to-dos-self.vercel.app/',
