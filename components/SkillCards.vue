@@ -1,7 +1,5 @@
 <script setup>
-const { data: skills } = await useFetch('/api/skills', {
-	method: 'get'
-})
+const skills = useSkill()
 </script>
 
 <template>

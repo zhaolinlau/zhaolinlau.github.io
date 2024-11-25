@@ -1,7 +1,5 @@
 <script setup>
-const { data: projects } = await useFetch('/api/projects', {
-	method: 'get'
-})
+const projects = useProject()
 </script>
 
 <template>

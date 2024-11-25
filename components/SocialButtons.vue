@@ -1,7 +1,5 @@
 <script setup>
-const { data: socials } = await useFetch('/api/socials', {
-	method: 'get'
-})
+const socials = useSocial()
 </script>
 
 <template>

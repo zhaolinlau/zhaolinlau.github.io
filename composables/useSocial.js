@@ -1,4 +1,4 @@
-export default defineEventHandler(async (event) => {
+export const useSocial = () => {
 	return [
 		{
 			variant: 'dark',
@@ -29,6 +29,6 @@ export default defineEventHandler(async (event) => {
 			to: 'https://twitter.com/zhaolinlau',
 			icon: 'line-md:twitter-x',
 			title: 'Twitter',
-		},
+		}
 	]
-})
+}

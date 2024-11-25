@@ -9,9 +9,7 @@ const scrollToElement = async (id) => {
 	});
 };
 
-const { data: items } = await useFetch('/api/navbar', {
-	method: 'get'
-})
+const items = useBar()
 </script>
 
 <template>

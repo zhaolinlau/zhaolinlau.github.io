@@ -1,4 +1,4 @@
-export default defineEventHandler(async (event) => {
+export const useProject = () => {
 	return [
 		{
 			title: 'UMPSA Connect',
@@ -69,6 +69,6 @@ export default defineEventHandler(async (event) => {
 				'Bulma',
 				'Nuxt'
 			]
-		},
+		}
 	]
-})
+}

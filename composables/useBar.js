@@ -1,4 +1,4 @@
-export default defineEventHandler(async (event) => {
+export const useBar = () => {
 	return [
 		{
 			name: 'About',
@@ -33,4 +33,4 @@ export default defineEventHandler(async (event) => {
 			to: 'https://www.buymeacoffee.com/zhaolinlau'
 		}
 	]
-})
+}

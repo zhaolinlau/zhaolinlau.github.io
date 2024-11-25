@@ -1,4 +1,4 @@
-export default defineEventHandler(async (event) => {
+export const useSkill = () => {
 	return [
 		{
 			icon: 'logos:supabase-icon',
@@ -55,6 +55,6 @@ export default defineEventHandler(async (event) => {
 		{
 			icon: 'logos:html-5',
 			title: 'HTML'
-		},
+		}
 	]
-})
+}
