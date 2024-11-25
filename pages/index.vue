@@ -43,13 +43,18 @@ const expYear = date.getFullYear() - 2021;
 				<div class="column is-8">
 					<p class="subtitle has-text-centered">Jack of all trades, master of "some"</p>
 					<p class="has-text-justified">
-						Web developer with more than <b>{{ expYear }} years</b> of well-rounded hands-on experience with a
-						diploma in the field of
-						<b>Computer Science</b>, extensive knowledge of modern Web techniques and love for <b>Lemon Tea</b>. Looking
-						for
-						an
-						opportunity to work and upgrade, as well as being involved in an organization that believes in gaining a
-						competitive edge and giving back to the community.
+						Web developer with more than <b>{{ expYear }} years</b> of well-rounded hands-on experience in web
+						technologies like <b>Vue</b>, <b>Nuxt</b>,
+						and <b>Laravel</b>, and a passion for <b>Lemon Tea</b>. Currently in my final year as a <b>Software
+							Engineering</b>
+						student,
+						seeking an <b>internship</b> opportunity with <b>6 months</b> of duration from <b>10 March 2025 to 22 August
+							2025</b> to
+						work
+						and
+						upgrade, as
+						well as being involved in an organization that believes
+						in gaining a competitive edge and giving back to the community.
 					</p>
 				</div>
 			</div>
