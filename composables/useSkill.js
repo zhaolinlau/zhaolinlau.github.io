@@ -1,6 +1,10 @@
 export const useSkill = () => {
 	return [
 		{
+			icon: 'simple-icons:primevue',
+			title: 'PrimeVue'
+		},
+		{
 			icon: 'logos:supabase-icon',
 			title: 'Supabase'
 		},
@@ -25,6 +29,10 @@ export const useSkill = () => {
 			title: 'Vuetify'
 		},
 		{
+			icon: 'simple-icons:buefy',
+			title: 'Buefy'
+		},
+		{
 			icon: 'logos:vue',
 			title: 'Vue'
 		},
@@ -34,7 +42,7 @@ export const useSkill = () => {
 		},
 		{
 			icon: 'logos:git-icon',
-			title: 'git'
+			title: 'Git'
 		},
 		{
 			icon: 'logos:mysql',
