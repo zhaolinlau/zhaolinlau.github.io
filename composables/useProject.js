@@ -63,7 +63,7 @@ export const useProject = () => {
 		{
 			title: 'Huawei Open Day: Intelligent World 2030',
 			src: 'huawei-intelligent-world-2030.png',
-			domain: 'https://huawei-intelligent-world-2030.vercel.app/',
+			domain: 'https://intelligent-world.vercel.app/',
 			public: true,
 			repo: 'https://github.com/zhaolinlau/huawei-intelligent-world-2030',
 			tags: [
