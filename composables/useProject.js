@@ -13,6 +13,18 @@ export const useProject = () => {
 			]
 		},
 		{
+			title: 'Lucky Draw System',
+			src: 'lucky-draw.png',
+			domain: 'https://uxhmac.vercel.app/lucky-draw',
+			public: false,
+			repo: '',
+			tags: [
+				'Bulma',
+				'Nuxt',
+				'Supabase'
+			]
+		},
+		{
 			title: 'To-dos',
 			src: 'to-dos.png',
 			domain: 'https://to-dos-self.vercel.app/',
