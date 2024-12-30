@@ -9,27 +9,27 @@
 		"postinstall": "nuxt prepare"
 	},
 	"dependencies": {
-		"@nuxt/icon": "^1.5.2",
-		"@nuxt/image": "^1.8.0",
+		"@nuxt/icon": "^1.10.3",
+		"@nuxt/image": "^1.8.1",
 		"@nuxtjs/google-fonts": "^3.2.0",
-		"@vee-validate/nuxt": "^4.13.2",
-		"@vee-validate/zod": "^4.13.2",
+		"@vee-validate/nuxt": "^4.15.0",
+		"@vee-validate/zod": "^4.15.0",
 		"animate.css": "^4.1.1",
-		"bulma": "^1.0.2",
-		"nuxt": "^3.14.1592",
+		"bulma": "^1.0.3",
+		"nuxt": "^3.15.0",
 		"nuxt-mail": "^5.1.1",
-		"vee-validate": "^4.13.2",
-		"vue": "^3.5.10",
-		"vue-router": "^4.4.5",
+		"vee-validate": "^4.15.0",
+		"vue": "^3.5.13",
+		"vue-router": "^4.5.0",
 		"vue-scrollto": "^2.20.0",
 		"vue-writer": "^2.0.2",
-		"zod": "^3.23.8"
+		"zod": "^3.24.1"
 	},
 	"devDependencies": {
-		"@iconify-json/line-md": "^1.2.1",
-		"@iconify-json/logos": "^1.2.0",
-		"@iconify-json/mdi": "^1.2.0",
-		"@iconify-json/simple-icons": "^1.2.4"
+		"@iconify-json/line-md": "^1.2.4",
+		"@iconify-json/logos": "^1.2.4",
+		"@iconify-json/mdi": "^1.2.2",
+		"@iconify-json/simple-icons": "^1.2.17"
 	},
-	"packageManager": "pnpm@9.14.2+sha512.6e2baf77d06b9362294152c851c4f278ede37ab1eba3a55fda317a4a17b209f4dbb973fb250a77abc463a341fcb1f17f17cfa24091c4eb319cda0d9b84278387"
+	"packageManager": "pnpm@9.15.2+sha512.93e57b0126f0df74ce6bff29680394c0ba54ec47246b9cf321f0121d8d9bb03f750a705f24edc3c1180853afd7c2c3b94196d0a3d53d3e069d9e2793ef11f321"
 }
