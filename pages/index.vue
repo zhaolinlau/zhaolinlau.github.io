@@ -1,7 +1,7 @@
 <script setup>
-import { VueWriter } from 'vue-writer';
-const date = new Date();
-const expYear = date.getFullYear() - 2021;
+import { VueWriter } from 'vue-writer'
+const date = new Date()
+const expYear = date.getFullYear() - 2021
 </script>
 
 <template>
@@ -43,12 +43,15 @@ const expYear = date.getFullYear() - 2021;
 				<div class="column is-8">
 					<p class="subtitle has-text-centered">Jack of all trades, master of "some"</p>
 					<p class="has-text-justified">
-						Web developer with more than <b>{{ expYear }} years</b> of well-rounded hands-on experience in web
+						Web developer with more than <b>{{ expYear }} years</b> of well-rounded hands-on experience in
+						web
 						technologies like <b>Vue</b>, <b>Nuxt</b>,
-						and <b>Laravel</b>, and a passion for <b>Lemon Tea</b>. Currently in my final year as a <b>Software
+						and <b>Laravel</b>, and a passion for <b>Lemon Tea</b>. Currently in my final year as a
+						<b>Software
 							Engineering</b>
 						student,
-						seeking an <b>internship</b> opportunity with <b>6 months</b> of duration from <b>10 March 2025 to 22 August
+						seeking an <b>internship</b> opportunity with <b>6 months</b> of duration from <b>10 March 2025
+							to 22 August
 							2025</b> to
 						work
 						and

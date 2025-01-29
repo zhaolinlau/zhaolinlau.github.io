@@ -1,46 +1,50 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-	devtools: { enabled: true },
+  devtools: { enabled: true },
 
-	modules: [
-		"@nuxt/icon",
-		"@nuxt/image",
-		"@nuxtjs/google-fonts",
-		"@vee-validate/nuxt",
-		[
-			"nuxt-mail",
-			{
-				message: {
-					to: process.env.MESSAGE_TO,
-				},
-				smtp: {
-					service: process.env.SMTP_SERVICE,
-					auth: {
-						user: process.env.SMTP_AUTH_USER,
-						pass: process.env.SMTP_AUTH_PASS,
-					},
-				},
-			},
-		],
-	],
+  modules: [
+    '@nuxtjs/tailwindcss',
+    '@nuxt/icon',
+    '@nuxt/image',
+    '@nuxtjs/google-fonts',
+    '@vee-validate/nuxt',
+    'nuxt-mail',
+    'shadcn-nuxt',
+    '@nuxtjs/color-mode'
+  ],
 
-	googleFonts: {
-		families: {
-			Merienda: {
-				wght: "300..900",
-			},
-		},
-		display: "swap",
-	},
+  shadcn: {
+    prefix: '',
+    componentDir: './components/ui'
+  },
 
-	css: [
-		'animate.css/animate.min.css',
-		'bulma/css/bulma.min.css'
-	],
+  runtimeConfig: {
+    mail: {
+      message: {
+        to: process.env.MESSAGE_TO
+      },
+      smtp: {
+        service: process.env.SMTP_SERVICE,
+        auth: {
+          user: process.env.SMTP_AUTH_USER,
+          pass: process.env.SMTP_AUTH_PASS
+        }
+      }
+    }
+  },
 
-	icon: {
-		size: '1.2em'
-	},
+  googleFonts: {
+    families: {
+      Merienda: {
+        wght: '300..900',
+      },
+    },
+    display: 'swap'
+  },
 
-	compatibilityDate: "2024-07-18"
+  icon: {
+    size: '1.2em'
+  },
+
+  compatibilityDate: '2024-07-18'
 });
