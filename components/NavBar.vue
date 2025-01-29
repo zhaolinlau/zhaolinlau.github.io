@@ -12,7 +12,7 @@ const items = useBar()
 
 		<div>
 			<template v-for="item in items" :key="item">
-				<Button variant="ghost" @click="scrollTo(`#${item.scrollTo}`)" v-if="item.scrollTo" v-sc>
+				<Button variant="ghost" @click="scrollTo(`#${item.scrollTo}`)" v-if="item.scrollTo">
 					<Icon :name="item.icon" /> {{ item.name }}
 				</Button>
 
