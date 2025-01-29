@@ -1,36 +1,24 @@
 <script setup>
-const showButton = ref(false);
+const scrollY = ref(0)
+
+const scrollToTop = async () => {
+	window.scrollTo({ top: 0, behavior: 'smooth' })
+}
+
+const handleScrollY = async () => {
+	scrollY.value = window.scrollY
+}
 
 onMounted(() => {
-	window.addEventListener('scroll', handleScroll);
+	window.addEventListener('scroll', handleScrollY)
 })
-
-function handleScroll() {
-	showButton.value = window.scrollY > 250;
-}
-
-function scrollToTop() {
-	window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-onUnmounted(() => {
-	window.removeEventListener('scroll', handleScroll);
-});
 </script>
 
 <template>
-	<button class="button is-link scrolltotop animate__animated animate__fadeIn" v-if="showButton" @click="scrollToTop">
-		<span class="icon">
+	<div class="bottom-5 right-5 fixed z-10 transition-opacity duration-300"
+		:class="scrollY > 250 ? 'opacity-100' : 'opacity-0 pointer-events-none'">
+		<Button @click="scrollToTop" size="icon">
 			<Icon name="mdi:arrow-up" />
-		</span>
-	</button>
+		</Button>
+	</div>
 </template>
-
-<style>
-.scrolltotop {
-	position: fixed;
-	bottom: 20px;
-	right: 20px;
-	z-index: 99;
-}
-</style>
