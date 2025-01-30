@@ -39,7 +39,7 @@ const test = async (location) => {
 
 			<DrawerContent class="dark text-zinc-50">
 				<DrawerHeader>
-					<DrawerTitle>
+					<DrawerTitle class="text-center">
 						Menu
 					</DrawerTitle>
 				</DrawerHeader>
