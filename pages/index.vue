@@ -7,19 +7,21 @@ const expYear = date.getFullYear() - 2021
 <template>
 	<div>
 		<div class="h-[calc(100vh-61px)] flex items-center">
-			<div class="w-full">
-				<p class="text-2xl">Hello! I am</p>
-				<p class="text-5xl italic font-bold">Zhaolin Lau</p>
-				<p class="text-4xl">
-					<VueWriter :typeSpeed="50" :eraseSpeed="50" :array="['Developer From Malaysia']">
-						A Passionate Web
-					</VueWriter>
-				</p>
+			<AuroraBackground>
+				<div class="w-full">
+					<p class="text-2xl">Hello! I am</p>
+					<p class="text-5xl italic font-bold">Zhaolin Lau</p>
+					<p class="text-4xl">
+						<VueWriter :typeSpeed="50" :eraseSpeed="50" :array="['Developer From Malaysia']">
+							A Passionate Web
+						</VueWriter>
+					</p>
 
-				<div class="buttons">
-					<SocialButtons />
+					<div class="buttons">
+						<SocialButtons />
+					</div>
 				</div>
-			</div>
+			</AuroraBackground>
 		</div>
 
 		<div class="flex" id="about">
