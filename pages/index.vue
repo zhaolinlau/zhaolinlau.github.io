@@ -7,8 +7,8 @@ const expYear = date.getFullYear() - 2021
 <template>
 	<div>
 		<div class="h-[calc(100vh-61px)] flex items-center">
-			<AuroraBackground>
-				<div class="w-full">
+			<AuroraBackground class="-z-[1]">
+				<div class="w-full z-0">
 					<p class="text-2xl">Hello! I am</p>
 					<p class="text-5xl italic font-bold">Zhaolin Lau</p>
 					<p class="text-4xl">
