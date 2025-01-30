@@ -5,5 +5,6 @@
 			<slot />
 		</div>
 		<Footer />
+		<BackTop />
 	</div>
 </template>
