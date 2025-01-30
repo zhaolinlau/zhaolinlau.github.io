@@ -4,7 +4,7 @@ const expYear = date.getFullYear() - 2021
 useHead({
 	title: 'Zhaolin Lau',
 	meta: [
-		{ name: 'description', content: 'Web developer with more than ' + expYear + ' years of well-rounded hands-on experience with a diploma in the field of Computer Science, extensive knowledge of modern Web techniques and love for Milo. Looking for an opportunity to work and upgrade, as well as being involved in an organization that believes in gaining a competitive edge and giving back to the community.' },
+		{ name: 'description', content: 'Web developer with more than ' + expYear + ' years of well-rounded hands-on experience in web technologies like Vue, Nuxt, and Laravel, and a passion for Milo & Milk Tea. Currently building something awesome with Nuxt, exploring innovative web solutions and pushing the boundaries of modern web development. A big fan of open source.' },
 		{ name: 'google-site-verification', content: 'VtoMnB1qYS9XFl4WG3wUGq17dPOTwoH5vyWofp90A-Y' }
 	]
 })
@@ -12,8 +12,8 @@ useHead({
 useSeoMeta({
 	title: 'Zhaolin Lau',
 	ogTitle: 'Zhaolin Lau',
-	description: 'Web developer with more than ' + expYear + ' years of well-rounded hands-on experience with a diploma in the field of Computer Science, extensive knowledge of modern Web techniques and love for Milo. Looking for an opportunity to work and upgrade, as well as being involved in an organization that believes in gaining a competitive edge and giving back to the community.',
-	ogDescription: 'Web developer with more than ' + expYear + ' years of well-rounded hands-on experience with a diploma in the field of Computer Science, extensive knowledge of modern Web techniques and love for Milo. Looking for an opportunity to work and upgrade, as well as being involved in an organization that believes in gaining a competitive edge and giving back to the community.',
+	description: 'Web developer with more than ' + expYear + ' years of well-rounded hands-on experience in web technologies like Vue, Nuxt, and Laravel, and a passion for Milo & Milk Tea. Currently building something awesome with Nuxt, exploring innovative web solutions and pushing the boundaries of modern web development. A big fan of open source.',
+	ogDescription: 'Web developer with more than ' + expYear + ' years of well-rounded hands-on experience in web technologies like Vue, Nuxt, and Laravel, and a passion for Milo & Milk Tea. Currently building something awesome with Nuxt, exploring innovative web solutions and pushing the boundaries of modern web development. A big fan of open source.',
 	ogImage: '/img/me.jpg',
 	twitterCard: 'summary_large_image'
 })
