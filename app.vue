@@ -20,7 +20,7 @@ useSeoMeta({
 </script>
 
 <template>
-	<div class="bg-zinc-950 text-zinc-50 dark">
+	<div class="bg-zinc-950 text-zinc-50 dark" vaul-drawer-wrapper>
 		<NuxtRouteAnnouncer />
 		<NuxtLayout>
 			<NuxtPage />

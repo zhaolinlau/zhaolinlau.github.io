@@ -22,6 +22,7 @@
 		"nuxt-mail": "^5.1.1",
 		"radix-vue": "^1.9.13",
 		"shadcn-nuxt": "^0.11.3",
+		"vaul-vue": "^0.2.0",
 		"vee-validate": "^4.15.0",
 		"vue": "latest",
 		"vue-router": "latest",
