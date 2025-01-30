@@ -54,7 +54,7 @@ const contact = handleSubmit(async (values, actions) => {
 
 <template>
 	<div class="grid grid-cols-12 mt-3">
-		<Card class="col-start-4 col-span-6">
+		<Card class="lg:col-start-4 lg:col-span-6 col-span-12">
 			<form @submit="contact" class="mt-3">
 				<CardContent>
 					<FormField v-slot="{ componentField }" name="subject">
