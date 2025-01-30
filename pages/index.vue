@@ -22,9 +22,9 @@ const expYear = date.getFullYear() - 2021
 			</div>
 		</div>
 
-		<div class="flex h-screen items-center" id="about">
+		<div class="flex" id="about">
 			<div class="w-full">
-				<p class="text-3xl flex items-center justify-center font-bold">
+				<p class="text-3xl flex items-center justify-center font-bold mt-16">
 					<Icon name="mdi:information-variant-circle-outline" /> About Me
 				</p>
 				<div class="grid grid-cols-12 gap-3 mt-3">
@@ -48,9 +48,9 @@ const expYear = date.getFullYear() - 2021
 			</div>
 		</div>
 
-		<div class="flex items-center min-h-screen" id="skills">
+		<div class="flex" id="skills">
 			<div class="w-full">
-				<p class="text-3xl flex items-center justify-center font-bold">
+				<p class="text-3xl flex items-center justify-center font-bold mt-16">
 					<Icon name="mdi:code-tags" /> My Skills
 				</p>
 
@@ -58,20 +58,15 @@ const expYear = date.getFullYear() - 2021
 			</div>
 		</div>
 
-		<section class="section" id="projects">
-			<div class="container">
-				<p class="title has-text-centered mt-5">
-					<span class="icon-text">
-						<span class="icon">
-							<span class="mdi mdi-folder-file"></span>
-						</span>
-						<span>My Projects</span>
-					</span>
+		<div class="flex" id="projects">
+			<div class="w-full">
+				<p class="text-3xl flex items-center justify-center font-bold mt-16">
+					<Icon name="mdi:folder-file" /> My Projects
 				</p>
 
 				<ProjectCards />
 			</div>
-		</section>
+		</div>
 
 		<section class="section" id="contact">
 			<div class="container">
