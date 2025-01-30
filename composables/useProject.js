@@ -78,7 +78,8 @@ export const useProject = () => {
 			public: true,
 			repo: 'https://github.com/zhaolinlau/zhaolinlau.github.io',
 			tags: [
-				'Bulma',
+				'ShadcnVue',
+				'Tailwind',
 				'Nuxt'
 			]
 		}
