@@ -6,7 +6,6 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxt/icon',
     '@nuxt/image',
-    '@nuxtjs/google-fonts',
     '@vee-validate/nuxt',
     'nuxt-mail',
     'shadcn-nuxt',
@@ -31,19 +30,6 @@ export default defineNuxtConfig({
         }
       }
     }
-  },
-
-  googleFonts: {
-    families: {
-      Merienda: {
-        wght: '300..900',
-      },
-    },
-    display: 'swap'
-  },
-
-  icon: {
-    size: '1.2em'
   },
 
   compatibilityDate: '2024-07-18'

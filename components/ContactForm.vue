@@ -1,33 +1,28 @@
 <script setup>
-import { toTypedSchema } from '@vee-validate/zod';
-import * as zod from 'zod';
+import { toTypedSchema } from '@vee-validate/zod'
+import * as z from 'zod'
+import { useToast } from './ui/toast'
 
-const contactError = ref('');
-const contactSuccess = ref('');
-const contacting = ref(false);
-const mail = useMail();
+const loading = ref(false)
+const mail = useMail()
+const { toast } = useToast()
 
-const validationSchema = toTypedSchema(
-	zod.object({
-		subject: zod.string().min(1),
-		name: zod.string().min(1),
-		email: zod.string().min(1).email(),
-		message: zod.string().min(1)
+const formSchema = toTypedSchema(
+	z.object({
+		subject: z.string().min(1),
+		name: z.string().min(1),
+		email: z.string().email(),
+		message: z.string().min(1)
 	})
-);
+)
 
-const { handleSubmit, errors, defineField, } = useForm({
-	validationSchema
-});
-
-const [email, emailAttrs] = defineField('email');
-const [name, nameAttrs] = defineField('name');
-const [subject, subjectAttrs] = defineField('subject');
-const [message, messageAttrs] = defineField('message');
+const { handleSubmit } = useForm({
+	validationSchema: formSchema
+})
 
 const contact = handleSubmit(async (values, actions) => {
 	try {
-		contacting.value = true;
+		loading.value = true
 
 		await mail.send({
 			subject: values.subject,
@@ -36,98 +31,99 @@ const contact = handleSubmit(async (values, actions) => {
 			Email: ${values.email} 
 			Message: ${values.message}
 			`,
-		});
+		})
 
-		actions.resetForm();
-		contactSuccess.value = 'Your message has been sent successfully.';
-		contactError.value = '';
+		toast({
+			title: 'Success',
+			description: 'Your message has been sent successfully.',
+			class: 'text-green-500'
+		})
+
+		actions.resetForm()
 	} catch (error) {
-		contactError.value = error.message;
-		contactSuccess.value = '';
+		toast({
+			title: 'Error',
+			description: error.message,
+			class: 'text-red-500'
+		})
 	} finally {
-		contacting.value = false;
-		setTimeout(() => {
-			contactSuccess.value = '';
-			contactError.value = '';
-		}, 3000);
-	};
-});
+		loading.value = false
+	}
+})
 </script>
 
 <template>
-	<form class="box" @submit.prevent="contact()">
-		<div class="notification is-success" v-if="contactSuccess">
-			<button class="delete" @click="contactSuccess = ''"></button>
-			{{ contactSuccess }}
-		</div>
+	<div class="grid grid-cols-12 mt-3">
+		<Card class="col-start-4 col-span-6">
+			<form @submit="contact" class="mt-3">
+				<CardContent>
+					<FormField v-slot="{ componentField }" name="subject">
+						<FormItem>
+							<FormLabel for="subject">Subject</FormLabel>
+							<FormControl>
+								<div class="relative w-full max-w-sm items-center">
+									<Input class="pl-10" :="componentField" :disabled="loading" id="subject" />
 
-		<div class="notification is-danger" v-if="contactError">
-			<button class="delete" @click="contactError = ''"></button>
-			{{ contactError }}
-		</div>
+									<span class="absolute start-0 inset-y-0 flex items-center justify-center px-2">
+										<Icon name="mdi:format-title" class="text-muted-foreground" />
+									</span>
+								</div>
+							</FormControl>
 
-		<div class="field">
-			<label for="subject" class="label">Subject</label>
-			<div class="control has-icons-left">
-				<input type="text" class="input" :class="errors.subject ? 'is-danger' : ''" v-model="subject" :subjectAttrs
-					id="subject" :disabled="contacting">
-				<span class="icon is-left">
-					<Icon name="mdi:format-title" />
-				</span>
-			</div>
-			<p class="help is-danger" v-if="errors.subject">
-				{{ errors.subject }}
-			</p>
-		</div>
+							<FormMessage />
+						</FormItem>
+					</FormField>
 
-		<div class="field">
-			<label for="name" class="label">Name</label>
-			<div class="control has-icons-left">
-				<input type="text" class="input" :class="errors.name ? 'is-danger' : ''" v-model="name" :nameAttrs id="name"
-					:disabled="contacting">
-				<span class="icon is-left">
-					<Icon name="mdi:account" />
-				</span>
-			</div>
-			<p class="help is-danger" v-if="errors.name">
-				{{ errors.name }}
-			</p>
-		</div>
+					<FormField v-slot="{ componentField }" name="name">
+						<FormItem>
+							<FormLabel for="name">Name</FormLabel>
+							<FormControl>
+								<div class="relative w-full max-w-sm items-center">
+									<Input class="pl-10" :="componentField" id="name" :disabled="loading" />
+									<span class="absolute start-0 inset-y-0 flex items-center justify-center px-2">
+										<Icon name="mdi:account" class="text-muted-foreground" />
+									</span>
+								</div>
+							</FormControl>
 
-		<div class="field">
-			<label for="email" class="label">Email</label>
-			<div class="control has-icons-left">
-				<input type="email" class="input" :class="errors.email ? 'is-danger' : ''" v-model="email" :emailAttrs
-					id="email" :disabled="contacting">
-				<span class="icon is-left">
-					<Icon name="mdi:email" />
-				</span>
-			</div>
-			<p class="help is-danger" v-if="errors.email">
-				{{ errors.email }}
-			</p>
-		</div>
+							<FormMessage />
+						</FormItem>
+					</FormField>
 
-		<div class="field">
-			<label for="message" class="label">Message</label>
-			<div class="control">
-				<textarea class="textarea" :class="errors.message ? 'is-danger' : ''" v-model="message" :messageAttrs
-					id="message" :disabled="contacting"></textarea>
-			</div>
-			<p class="help is-danger" v-if="errors.message">
-				{{ errors.message }}
-			</p>
-		</div>
+					<FormField v-slot="{ componentField }" name="email">
+						<FormItem>
+							<FormLabel for="email">Email</FormLabel>
+							<FormControl>
+								<div class="relative w-full max-w-sm items-center">
+									<Input class="pl-10" :="componentField" id="email" :disabled="loading" />
+									<span class="absolute start-0 inset-y-0 flex items-center justify-center px-2">
+										<Icon name="mdi:email" class="text-muted-foreground" />
+									</span>
+								</div>
+							</FormControl>
 
-		<div class="field">
-			<div class="control is-expanded">
-				<button class="button is-primary is-rounded is-fullwidth" :class="contacting ? 'is-loading' : ''" type="submit">
-					<span class="icon">
-						<Icon name="mdi:send" />
-					</span>
-					<span>Send</span>
-				</button>
-			</div>
-		</div>
-	</form>
+							<FormMessage />
+						</FormItem>
+					</FormField>
+
+					<FormField v-slot="{ componentField }" name="message">
+						<FormItem>
+							<FormLabel for="message">Message</FormLabel>
+							<FormControl class="control">
+								<Textarea :="componentField" id="message" :disabled="loading" />
+							</FormControl>
+
+							<FormMessage />
+						</FormItem>
+					</FormField>
+				</CardContent>
+
+				<CardFooter>
+					<Button class="w-full" type="submit" :disabled="loading">
+						<Icon name="mdi:send" /> Send
+					</Button>
+				</CardFooter>
+			</form>
+		</Card>
+	</div>
 </template>

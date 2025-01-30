@@ -68,23 +68,15 @@ const expYear = date.getFullYear() - 2021
 			</div>
 		</div>
 
-		<section class="section" id="contact">
-			<div class="container">
-				<p class="title has-text-centered mt-5">
-					<span class="icon-text">
-						<span class="icon">
-							<span class="mdi mdi-mailbox"></span>
-						</span>
-						<span>Contact Me</span>
-					</span>
+		<div class="flex" id="contact">
+			<div class="w-full">
+				<p class="text-3xl flex items-center justify-center font-bold mt-16">
+					<Icon name="mdi:mailbox" /> Contact Me
 				</p>
-				<div class="columns">
-					<div class="column is-6 is-offset-3">
-						<ContactForm />
-					</div>
-				</div>
+
+				<ContactForm />
 			</div>
-		</section>
+		</div>
 	</div>
 </template>
 
