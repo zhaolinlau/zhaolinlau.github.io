@@ -4,7 +4,7 @@ const skills = useSkill()
 
 <template>
 	<div class="grid grid-cols-12 mt-3 gap-3">
-		<Card class="col-span-4 flex flex-col items-center" v-for="skill in skills">
+		<Card class="lg:col-span-4 col-span-6 flex flex-col items-center" v-for="skill in skills">
 			<CardHeader>
 				<CardTitle>
 					{{ skill.title }}
