@@ -28,11 +28,11 @@ const expYear = date.getFullYear() - 2021
 					<Icon name="mdi:information-variant-circle-outline" /> About Me
 				</p>
 				<div class="grid grid-cols-12 gap-3 mt-3">
-					<div class="col-span-4">
+					<div class="lg:col-span-4 col-span-12">
 						<NuxtImg class="rounded-full" src="/img/me.jpg" alt="LAU ZHAO LIN" />
 					</div>
 
-					<div class="col-span-8 p-3 flex items-center">
+					<div class="lg:col-span-8 col-span-12 p-3 flex items-center">
 						<div>
 							<p class="text-center text-2xl">Jack of all trades, master of "some"</p>
 							<p class="text-justify mt-5 text-lg">
