@@ -4,7 +4,7 @@ const projects = useProject()
 
 <template>
 	<div class="grid grid-cols-12 gap-3 mt-3">
-		<Card class="col-span-6" v-for="project in projects">
+		<Card class="lg:col-span-6 col-span-12" v-for="project in projects">
 			<CardHeader>
 				<CardTitle>
 					{{ project.title }}
