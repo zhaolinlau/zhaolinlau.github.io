@@ -7,7 +7,7 @@ const expYear = date.getFullYear() - 2021
 <template>
 	<div>
 		<div class="h-[calc(100vh-61px)] flex items-center">
-			<div>
+			<div class="w-full">
 				<p class="text-2xl">Hello! I am</p>
 				<p class="text-5xl italic font-bold">Zhaolin Lau</p>
 				<p class="text-4xl">
@@ -23,7 +23,7 @@ const expYear = date.getFullYear() - 2021
 		</div>
 
 		<div class="flex h-screen items-center" id="about">
-			<div>
+			<div class="w-full">
 				<p class="text-3xl flex items-center justify-center font-bold">
 					<Icon name="mdi:information-variant-circle-outline" /> About Me
 				</p>
@@ -48,20 +48,15 @@ const expYear = date.getFullYear() - 2021
 			</div>
 		</div>
 
-		<section class="section has-text-centered" id="skills">
-			<div class="container">
-				<p class="title mt-5">
-					<span class="icon-text">
-						<span class="icon">
-							<span class="mdi mdi-code-tags"></span>
-						</span>
-						<span>My Skills</span>
-					</span>
+		<div class="flex items-center min-h-screen" id="skills">
+			<div class="w-full">
+				<p class="text-3xl flex items-center justify-center font-bold">
+					<Icon name="mdi:code-tags" /> My Skills
 				</p>
 
 				<SkillCards />
 			</div>
-		</section>
+		</div>
 
 		<section class="section" id="projects">
 			<div class="container">

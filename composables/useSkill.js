@@ -1,11 +1,23 @@
 export const useSkill = () => {
 	return [
 		{
+			icon: 'simple-icons:shadcnui',
+			title: 'ShadcnVue'
+		},
+		{
+			icon: 'simple-icons:prisma',
+			title: 'Prisma'
+		},
+		{
+			icon: 'devicon:tailwindcss',
+			title: 'Tailwind'
+		},
+		{
 			icon: 'simple-icons:primevue',
 			title: 'PrimeVue'
 		},
 		{
-			icon: 'logos:supabase-icon',
+			icon: 'devicon:supabase',
 			title: 'Supabase'
 		},
 		{
@@ -13,19 +25,19 @@ export const useSkill = () => {
 			title: 'Nuxt'
 		},
 		{
-			icon: 'logos:bootstrap',
+			icon: 'devicon:bootstrap',
 			title: 'Bootstrap'
 		},
 		{
-			icon: 'logos:laravel',
+			icon: 'devicon:laravel',
 			title: 'Laravel'
 		},
 		{
-			icon: 'logos:markdown',
+			icon: 'mdi:language-markdown-outline',
 			title: 'Markdown'
 		},
 		{
-			icon: 'logos:vuetifyjs',
+			icon: 'devicon:vuetify',
 			title: 'Vuetify'
 		},
 		{
@@ -33,7 +45,7 @@ export const useSkill = () => {
 			title: 'Buefy'
 		},
 		{
-			icon: 'logos:vue',
+			icon: 'devicon:vuejs',
 			title: 'Vue'
 		},
 		{
@@ -41,27 +53,27 @@ export const useSkill = () => {
 			title: 'Bulma'
 		},
 		{
-			icon: 'logos:git-icon',
+			icon: 'devicon:git',
 			title: 'Git'
 		},
 		{
-			icon: 'logos:mysql',
+			icon: 'devicon:mysql',
 			title: 'MySQL'
 		},
 		{
-			icon: 'logos:php',
+			icon: 'devicon:php',
 			title: 'PHP'
 		},
 		{
-			icon: 'logos:javascript',
+			icon: 'devicon:javascript',
 			title: 'JavaScript'
 		},
 		{
-			icon: 'logos:css-3',
+			icon: 'devicon:css3',
 			title: 'CSS'
 		},
 		{
-			icon: 'logos:html-5',
+			icon: 'devicon:html5',
 			title: 'HTML'
 		}
 	]

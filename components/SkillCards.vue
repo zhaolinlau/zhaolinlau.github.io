@@ -3,12 +3,17 @@ const skills = useSkill()
 </script>
 
 <template>
-	<div class="columns is-multiline">
-		<div class="column is-4" v-for="skill in skills">
-			<div class="box">
-				<Icon :name="skill.icon" class="icon is-large" />
-				<p class="title is-4">{{ skill.title }}</p>
-			</div>
-		</div>
+	<div class="grid grid-cols-12 mt-3 gap-3">
+		<Card class="col-span-4 flex flex-col items-center" v-for="skill in skills">
+			<CardHeader>
+				<CardTitle>
+					{{ skill.title }}
+				</CardTitle>
+			</CardHeader>
+
+			<CardContent>
+				<Icon :name="skill.icon" size="3em" />
+			</CardContent>
+		</Card>
 	</div>
 </template>
