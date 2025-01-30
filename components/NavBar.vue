@@ -3,7 +3,7 @@ const items = useBar()
 </script>
 
 <template>
-	<div class="flex items-center justify-evenly fixed w-screen bg-zinc-950/75 backdrop-blur-md py-3 z-[1] border-b">
+	<div class="flex items-center justify-evenly sticky top-0 bg-zinc-950/75 backdrop-blur-md py-3 z-[1] border-b">
 		<div>
 			<Button variant="ghost" @click="scrollTo('#top')">
 				<p class="text-xl">Zhaolin Lau</p>

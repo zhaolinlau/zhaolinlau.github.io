@@ -6,7 +6,7 @@ const expYear = date.getFullYear() - 2021
 
 <template>
 	<div>
-		<div class="h-screen flex items-center">
+		<div class="h-[calc(100vh-61px)] flex items-center">
 			<div>
 				<p class="text-2xl">Hello! I am</p>
 				<p class="text-5xl italic font-bold">Zhaolin Lau</p>
@@ -22,47 +22,31 @@ const expYear = date.getFullYear() - 2021
 			</div>
 		</div>
 
-		<section class="section" id="about">
-			<div class="container">
-				<p class="title mt-5 has-text-centered">
-					<span class="icon-text">
-						<span class="icon">
-							<span class="mdi mdi-information-variant-circle-outline"></span>
-						</span>
-						<span>About Me</span>
-					</span>
+		<div class="flex h-screen items-center" id="about">
+			<div>
+				<p class="text-3xl flex items-center justify-center font-bold">
+					<Icon name="mdi:information-variant-circle-outline" /> About Me
 				</p>
-				<div class="columns is-multiline is-vcentered">
-					<div class="column is-4">
-						<figure class="image">
-							<NuxtImg class="is-rounded" src="img/me.jpg" alt="LAU ZHAO LIN" />
-						</figure>
+				<div class="grid grid-cols-12 gap-3 mt-3">
+					<div class="col-span-4">
+						<NuxtImg class="rounded-full" src="/img/me.jpg" alt="LAU ZHAO LIN" />
 					</div>
-					<div class="column is-8">
-						<p class="subtitle has-text-centered">Jack of all trades, master of "some"</p>
-						<p class="has-text-justified">
-							Web developer with more than <b>{{ expYear }} years</b> of well-rounded hands-on experience
-							in
-							web
-							technologies like <b>Vue</b>, <b>Nuxt</b>,
-							and <b>Laravel</b>, and a passion for <b>Lemon Tea</b>. Currently in my final year as a
-							<b>Software
-								Engineering</b>
-							student,
-							seeking an <b>internship</b> opportunity with <b>6 months</b> of duration from <b>10 March
-								2025
-								to 22 August
-								2025</b> to
-							work
-							and
-							upgrade, as
-							well as being involved in an organization that believes
-							in gaining a competitive edge and giving back to the community.
-						</p>
+
+					<div class="col-span-8 p-3 flex items-center">
+						<div>
+							<p class="text-center text-2xl">Jack of all trades, master of "some"</p>
+							<p class="text-justify mt-5 text-lg">
+								Web developer with more than <b>{{ expYear }} years</b> of well-rounded hands-on
+								experience in web technologies like <b>Vue</b>, <b>Nuxt</b>, and <b>Laravel</b>, and a
+								passion for <b>Milo & Milk Tea</b>. Currently building something awesome with
+								<b>Nuxt</b>, exploring innovative web solutions and pushing the boundaries of modern web
+								development. A big fan of open source.
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
-		</section>
+		</div>
 
 		<section class="section has-text-centered" id="skills">
 			<div class="container">
