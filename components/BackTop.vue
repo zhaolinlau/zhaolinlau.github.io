@@ -1,6 +1,7 @@
 <script setup>
-const scrollY = ref(0)
+import { ArrowUpToLine } from 'lucide-vue-next'
 
+const scrollY = ref(0)
 const scrollToTop = async () => {
 	window.scrollTo({ top: 0, behavior: 'smooth' })
 }
@@ -17,8 +18,8 @@ onMounted(() => {
 <template>
 	<div class="bottom-5 right-5 fixed z-10 transition-opacity duration-300"
 		:class="scrollY > 250 ? 'opacity-100' : 'opacity-0 pointer-events-none'">
-		<Button @click="scrollToTop" size="icon">
-			<Icon name="mdi:arrow-up" />
-		</Button>
+		<ShimmerButton @click="scrollToTop">
+			<ArrowUpToLine class="text-zinc-50" />
+		</ShimmerButton>
 	</div>
 </template>
