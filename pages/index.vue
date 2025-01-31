@@ -1,5 +1,4 @@
 <script setup>
-import { VueWriter } from 'vue-writer'
 const date = new Date()
 const expYear = date.getFullYear() - 2021
 </script>
@@ -12,14 +11,14 @@ const expYear = date.getFullYear() - 2021
 					<p class="text-2xl">Hello! I am</p>
 					<p class="text-5xl italic font-bold">Zhaolin Lau</p>
 					<p class="text-4xl">
-						<VueWriter :typeSpeed="50" :eraseSpeed="50" :array="['Developer From Malaysia']">
-							A Passionate Web
-						</VueWriter>
+						A Passionate
+						<TextHighlight class="rounded-lg bg-gradient-to-r from-pink-500 to-violet-500">
+							<Flipwords :words="['Web Developer', 'Nuxt Enthusiast']" />
+						</TextHighlight>
+						From Malaysia
 					</p>
 
-					<div class="buttons">
-						<SocialButtons />
-					</div>
+					<SocialButtons />
 				</div>
 			</AuroraBackground>
 		</div>
@@ -81,43 +80,3 @@ const expYear = date.getFullYear() - 2021
 		</div>
 	</div>
 </template>
-
-<style>
-.is-typed span.cursor {
-	display: inline-block;
-	width: 5px;
-	animation: blink 1s infinite;
-}
-
-.is-typed span.cursor.typing {
-	animation: none;
-}
-
-@media (prefers-color-scheme: dark) {
-	@keyframes blink {
-		0%,
-
-		100% {
-			background-color: #f5f5f5;
-		}
-
-		50% {
-			background-color: transparent;
-		}
-	}
-}
-
-@media (prefers-color-scheme: light) {
-	@keyframes blink {
-		0%,
-
-		100% {
-			background-color: #4a4a4a;
-		}
-
-		50% {
-			background-color: transparent;
-		}
-	}
-}
-</style>
