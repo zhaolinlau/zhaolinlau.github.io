@@ -15,7 +15,7 @@ const expYear = date.getFullYear() - 2021
 							<h1 class="text-4xl">
 								A Passionate
 								<TextHighlight
-									class="font-bold rounded-xl bg-gradient-to-r from-pink-500 to-violet-500 p-3">
+									class="font-bold rounded-xl bg-gradient-to-r from-pink-500 to-violet-500 p-1.5">
 									<FlipWords :words="['Web Developer', 'Nuxt Enthusiast']" />
 								</TextHighlight>
 								From Malaysia
