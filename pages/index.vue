@@ -7,18 +7,22 @@ const expYear = date.getFullYear() - 2021
 	<div>
 		<div class="h-[calc(100vh-61px)] flex items-center">
 			<AuroraBackground class="-z-[1]">
-				<div class="w-full z-0">
-					<p class="text-2xl">Hello! I am</p>
-					<p class="text-5xl italic font-bold">Zhaolin Lau</p>
-					<p class="text-4xl">
-						A Passionate
-						<TextHighlight class="rounded-lg bg-gradient-to-r from-pink-500 to-violet-500">
-							<Flipwords :words="['Web Developer', 'Nuxt Enthusiast']" />
-						</TextHighlight>
-						From Malaysia
-					</p>
+				<div class="z-0 grid-cols-12">
+					<div class="col-span-12">
+						<p class="text-2xl">Hello! I am</p>
+						<p class="text-5xl italic font-bold">Zhaolin Lau</p>
+						<p class="text-4xl">
+							A Passionate
+							<TextHighlight class="rounded-lg bg-gradient-to-r from-pink-500 to-violet-500">
+								<Flipwords :words="['Web Developer', 'Nuxt Enthusiast']" />
+							</TextHighlight>
+							From Malaysia
+						</p>
+					</div>
 
-					<SocialButtons />
+					<div class="col-span-12 mt-3">
+						<SocialButtons />
+					</div>
 				</div>
 			</AuroraBackground>
 		</div>

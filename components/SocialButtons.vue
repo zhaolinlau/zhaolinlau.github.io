@@ -3,17 +3,12 @@ const socials = useSocial()
 </script>
 
 <template>
-	<div class="mt-3">
+	<div>
 		<template v-for="(social, index) in socials" :key="social">
-			<Button variant="outline" as-child class="hidden lg:inline-block">
-				<NuxtLink :class="`${index != 0 ? 'ml-3' : ''}`" :to="social.to" target="_blank">
-					<Icon :name="social.icon" /> {{ social.title }}
-				</NuxtLink>
-			</Button>
-
-			<Button variant="outline" as-child class="lg:hidden" size="icon">
-				<NuxtLink :class="`${index != 0 ? 'ml-3' : ''}`" :to="social.to" target="_blank">
-					<Icon :name="social.icon" />
+			<Button variant="outline" as-child>
+				<NuxtLink :class="`${index != 0 ? 'lg:ml-3' : ''}`" :to="social.to" target="_blank">
+					<Icon :name="social.icon" :class="social.color" /><span class="hidden lg:inline-flex"> {{
+						social.title }}</span>
 				</NuxtLink>
 			</Button>
 		</template>
