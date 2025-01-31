@@ -5,27 +5,30 @@ const expYear = date.getFullYear() - 2021
 
 <template>
 	<div>
-		<div class="h-[calc(100vh-61px)] flex items-center">
-			<AuroraBackground class="-z-[1]">
-				<div class="z-0 grid-cols-12">
-					<div class="col-span-12">
-						<p class="text-2xl">Hello! I am</p>
-						<HyperText text="Zhaolin Lau" class="text-5xl italic font-bold" />
-						<p class="text-4xl">
-							A Passionate
-							<TextHighlight class="rounded-lg bg-gradient-to-r from-pink-500 to-violet-500">
-								<Flipwords :words="['Web Developer', 'Nuxt Enthusiast']" />
-							</TextHighlight>
-							From Malaysia
-						</p>
-					</div>
+		<AuroraBackground class="-z-[1] h-screen">
+			<div class="h-[calc(100vh-61px)] z-0 w-full flex items-center">
+				<div class="w-full">
+					<div class="grid grid-cols-12">
+						<div class="col-span-12">
+							<p class="text-2xl">Hello! I am</p>
+							<HyperText text="Zhaolin Lau" class="text-5xl italic font-bold" />
+							<h1 class="text-4xl">
+								A Passionate
+								<TextHighlight
+									class="font-bold rounded-xl bg-gradient-to-r from-pink-500 to-violet-500 p-3">
+									<FlipWords :words="['Web Developer', 'Nuxt Enthusiast']" />
+								</TextHighlight>
+								From Malaysia
+							</h1>
+						</div>
 
-					<div class="col-span-12 mt-3">
-						<SocialButtons />
+						<div class="col-span-12 mt-3">
+							<SocialButtons />
+						</div>
 					</div>
 				</div>
-			</AuroraBackground>
-		</div>
+			</div>
+		</AuroraBackground>
 
 		<div class="flex" id="about">
 			<div class="w-full">
