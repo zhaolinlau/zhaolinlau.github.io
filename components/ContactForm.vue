@@ -57,12 +57,13 @@ const contact = handleSubmit(async (values, actions) => {
 		<Card class="lg:col-start-4 lg:col-span-6 col-span-12">
 			<form @submit="contact" class="mt-3">
 				<CardContent>
-					<FormField v-slot="{ componentField }" name="subject">
+					<FormField v-slot="{ componentField, errorMessage }" name="subject">
 						<FormItem>
-							<FormLabel for="subject">Subject</FormLabel>
+							<FormLabel class="text-zinc-50" for="subject">Subject</FormLabel>
 							<FormControl>
-								<div class="relative w-full max-w-sm items-center">
-									<Input class="pl-10" :="componentField" :disabled="loading" id="subject" />
+								<div class="relative w-full items-center">
+									<Input :class="`pl-10 ${errorMessage ? 'border-red-500' : ''}`" :="componentField"
+										:disabled="loading" id="subject" />
 
 									<span class="absolute start-0 inset-y-0 flex items-center justify-center px-2">
 										<Icon name="mdi:format-title" class="text-muted-foreground" />
@@ -70,50 +71,53 @@ const contact = handleSubmit(async (values, actions) => {
 								</div>
 							</FormControl>
 
-							<FormMessage />
+							<FormMessage class="text-red-500" />
 						</FormItem>
 					</FormField>
 
-					<FormField v-slot="{ componentField }" name="name">
+					<FormField v-slot="{ componentField, errorMessage }" name="name">
 						<FormItem>
-							<FormLabel for="name">Name</FormLabel>
+							<FormLabel class="text-zinc-50" for="name">Name</FormLabel>
 							<FormControl>
-								<div class="relative w-full max-w-sm items-center">
-									<Input class="pl-10" :="componentField" id="name" :disabled="loading" />
+								<div class="relative w-full items-center">
+									<Input :class="`pl-10 ${errorMessage ? 'border-red-500' : ''}`" :="componentField"
+										id="name" :disabled="loading" />
 									<span class="absolute start-0 inset-y-0 flex items-center justify-center px-2">
 										<Icon name="mdi:account" class="text-muted-foreground" />
 									</span>
 								</div>
 							</FormControl>
 
-							<FormMessage />
+							<FormMessage class="text-red-500" />
 						</FormItem>
 					</FormField>
 
-					<FormField v-slot="{ componentField }" name="email">
+					<FormField v-slot="{ componentField, errorMessage }" name="email">
 						<FormItem>
-							<FormLabel for="email">Email</FormLabel>
+							<FormLabel class="text-zinc-50" for="email">Email</FormLabel>
 							<FormControl>
-								<div class="relative w-full max-w-sm items-center">
-									<Input class="pl-10" :="componentField" id="email" :disabled="loading" />
+								<div class="relative w-full items-center">
+									<Input :class="`pl-10 ${errorMessage ? 'border-red-500' : ''}`" :="componentField"
+										id="email" :disabled="loading" />
 									<span class="absolute start-0 inset-y-0 flex items-center justify-center px-2">
 										<Icon name="mdi:email" class="text-muted-foreground" />
 									</span>
 								</div>
 							</FormControl>
 
-							<FormMessage />
+							<FormMessage class="text-red-500" />
 						</FormItem>
 					</FormField>
 
-					<FormField v-slot="{ componentField }" name="message">
+					<FormField v-slot="{ componentField, errorMessage }" name="message">
 						<FormItem>
-							<FormLabel for="message">Message</FormLabel>
+							<FormLabel class="text-zinc-50" for="message">Message</FormLabel>
 							<FormControl class="control">
-								<Textarea :="componentField" id="message" :disabled="loading" />
+								<Textarea :="componentField" :class="errorMessage ? 'border-red-500' : ''" id="message"
+									:disabled="loading" />
 							</FormControl>
 
-							<FormMessage />
+							<FormMessage class="text-red-500" />
 						</FormItem>
 					</FormField>
 				</CardContent>
