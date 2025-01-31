@@ -21,15 +21,13 @@ export const useBar = () => {
 			scrollTo: 'contact'
 		},
 		{
-			name: 'Buy Me a Coffee',
+			name: 'Ko-fi',
 			icon: 'simple-icons:kofi',
-			color: 'is-info',
 			to: 'https://ko-fi.com/V7V6EWJRF'
 		},
 		{
-			name: 'Buy me a coffee',
+			name: 'Buy Me a Coffee',
 			icon: 'simple-icons:buymeacoffee',
-			color: 'is-warning',
 			to: 'https://www.buymeacoffee.com/zhaolinlau'
 		}
 	]
