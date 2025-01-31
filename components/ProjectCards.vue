@@ -34,7 +34,7 @@ const projects = useProject()
 					</NuxtLink>
 				</Button>
 
-				<Button as-child variant="outline" class="col-span-6" v-if="!project.public" disabled>
+				<Button variant="outline" class="col-span-6" v-if="!project.public" disabled>
 					<div class="flex items-center justify-center">
 						<Icon name="mdi:lock" /> Private
 					</div>
