@@ -10,7 +10,7 @@ const expYear = date.getFullYear() - 2021
 				<div class="z-0 grid-cols-12">
 					<div class="col-span-12">
 						<p class="text-2xl">Hello! I am</p>
-						<p class="text-5xl italic font-bold">Zhaolin Lau</p>
+						<HyperText text="Zhaolin Lau" class="text-5xl italic font-bold" />
 						<p class="text-4xl">
 							A Passionate
 							<TextHighlight class="rounded-lg bg-gradient-to-r from-pink-500 to-violet-500">
