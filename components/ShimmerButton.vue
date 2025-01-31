@@ -1,6 +1,6 @@
 <template>
     <button :class="cn(
-        'group relative z-0 flex cursor-pointer items-center justify-center overflow-hidden whitespace-nowrap border border-white/10 px-6 py-3 text-white [background:var(--bg)] [border-radius:var(--radius)] dark:text-black',
+        'group relative z-0 flex cursor-pointer items-center justify-center overflow-hidden whitespace-nowrap border border-white/10 p-3 text-white [background:var(--bg)] [border-radius:var(--radius)] dark:text-black',
         'transform-gpu transition-transform duration-300 ease-in-out active:translate-y-px',
         $props.class,
     )
@@ -72,16 +72,6 @@ withDefaults(defineProps<ShimmerButtonProps>(), {
 @keyframes shimmer-btn-spin-around {
     0% {
         transform: translateZ(0) rotate(0);
-    }
-
-    15%,
-    35% {
-        transform: translateZ(0) rotate(90deg);
-    }
-
-    65%,
-    85% {
-        transform: translateZ(0) rotate(270deg);
     }
 
     100% {
