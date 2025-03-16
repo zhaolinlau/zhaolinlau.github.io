@@ -48,7 +48,8 @@ const expYear = date.getFullYear() - 2021
 								experience in web technologies like <b>Vue</b>, <b>Nuxt</b>, and <b>Laravel</b>, and a
 								passion for <b>Milo & Milk Tea</b>. Currently building something awesome with
 								<b>Nuxt</b>, exploring innovative web solutions and pushing the boundaries of modern web
-								development. A big fan of open source.
+								development. A big fan of open source. Currently interning as a Software Developer at
+								<b>Bluevy Cloud Sdn Bhd</b>.
 							</p>
 						</div>
 					</div>
