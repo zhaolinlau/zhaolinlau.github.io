@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const items = useBar()
 import { Menu } from 'lucide-vue-next'
 const isOpen = ref(false)

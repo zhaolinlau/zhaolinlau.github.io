@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const date = new Date()
 const expYear = date.getFullYear() - 2021
 useHead({

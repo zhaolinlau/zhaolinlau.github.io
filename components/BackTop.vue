@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { ArrowUpToLine } from 'lucide-vue-next'
 
 const scrollY = ref(0)
