@@ -44,8 +44,7 @@ export const useProject = () => {
 			public: false,
 			repo: '',
 			tags: [
-				'Bulma',
-				'PrimeVue',
+				'Nuxt UI',
 				'Nuxt'
 			]
 		},
