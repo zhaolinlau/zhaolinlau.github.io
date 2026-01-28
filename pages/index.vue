@@ -45,10 +45,10 @@ const expYear = date.getFullYear() - 2021
 							<p class="text-center text-2xl">Jack of all trades, master of "some"</p>
 							<p class="text-justify mt-5 text-lg">
 								Web developer with more than <b>{{ expYear }} years</b> of well-rounded hands-on
-								experience in web technologies like <b>Vue</b>, <b>Nuxt</b>, and <b>Laravel</b>, and a
+								portfolio experience in web technologies like <b>Vue</b>, <b>Nuxt</b>, and <b>Laravel</b>, and a
 								passion for <b>Milo & Milk Tea</b>. Currently building something awesome with
 								<b>Nuxt</b>, exploring innovative web solutions and pushing the boundaries of modern web
-								development. A big fan of open source. Currently interning as a Software Developer at
+								development. A big fan of open source. Currently working as a Software Engineer at
 								<b>Bluevy Cloud Sdn Bhd</b>.
 							</p>
 						</div>
